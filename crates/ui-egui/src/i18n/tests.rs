@@ -39,7 +39,7 @@ fn catalog_is_valid_and_preserves_placeholders_and_ellipses() {
 /// to English for what they don't cover yet; their gaps are reported, not enforced, so adding a
 /// command doesn't require a row in every language.
 const REQUIRED: &[&str] = &["uk"];
-const REPORTED: &[&str] = &["pt-BR", "de", "es", "cs", "ru", "fr", "zh"];
+const REPORTED: &[&str] = &["pt-BR", "de", "es", "cs", "ru", "fr", "zh", "ar"];
 
 fn check(language: &str, what: &str, missing: Vec<String>) {
     if REQUIRED.contains(&language) {
@@ -130,7 +130,7 @@ fn missing_marked_ui_literals(language: &str) -> BTreeSet<String> {
                     .unwrap();
                 let key: String = serde_json::from_str(&rest[..end]).unwrap();
                 // Coordinate axes, glyph buttons and product names are not translated.
-                if !["X", "Y", "B", "CADCraft"].contains(&key.as_str()) && !catalog.contains_key(&("", key.as_str())) {
+                if !["X", "Y", "B", "CADCraft", "muhandes"].contains(&key.as_str()) && !catalog.contains_key(&("", key.as_str())) {
                     missing.insert(key);
                 }
             }
@@ -341,7 +341,7 @@ fn live_switch_translates_the_shell_without_mutating_drawing_or_automation() {
 fn dialogs_render_in_ukrainian_and_keep_their_source_ids() {
     for (dialog, heading) in [
         ("dsettings", "Налаштування креслення"),
-        ("about", "Про CADCraft"),
+        ("about", "Про muhandes"),
         ("commands", "Довідник команд"),
         ("blocks", "Блоки"),
         ("layers", "Диспетчер властивостей шарів"),
@@ -474,7 +474,7 @@ fn live_czech_switch_preserves_drawing_command_and_saved_choice() {
 fn czech_dialogs_render_with_stable_ids() {
     for (dialog, heading) in [
         ("dsettings", "Nastavení kreslení"),
-        ("about", "O aplikaci CADCraft"),
+        ("about", "O aplikaci muhandes"),
         ("commands", "Přehled příkazů"),
         ("blocks", "Bloky"),
         ("layers", "Správce vlastností hladin"),
@@ -540,4 +540,29 @@ fn chinese_needs_an_installed_cjk_font() {
     if font.is_none() {
         assert!(app.status.as_ref().is_some_and(|(s, _)| s.contains("No Chinese font")));
     }
+}
+
+/// Arabic shows only with an installed Arabic font (none is bundled), like Chinese with its CJK font.
+#[test]
+fn arabic_needs_an_installed_arabic_font() {
+    assert_eq!(locale_language("ar-SA"), Some("ar"));
+    let mut app = CadApp::new(Session::new(), Services::default());
+    let r = app.run("ui.language", json!({"lang": "ar"})).unwrap();
+    assert_eq!(r["interfaceLanguage"], "ar");
+    let font = crate::theme::arabic_font();
+    assert_eq!(app.language(), if font.is_some() { "ar" } else { "en" });
+    assert_eq!(r["shown"], app.language());
+    if font.is_none() {
+        assert!(app.status.as_ref().is_some_and(|(s, _)| s.contains("No Arabic font")));
+    }
+}
+
+/// The Arabic catalog reads in visual order: a translation's words are reversed for display.
+#[test]
+fn arabic_catalog_is_stored_logically_and_shown_in_visual_order() {
+    let ar = LANGUAGES.iter().find(|l| l.code == "ar").expect("ar language");
+    let shown = tr("ar", "File");
+    assert_eq!(shown, "ملف");
+    assert_eq!(parse(ar.text()).1, Vec::<String>::new(), "catalog rows are well formed");
+    assert_eq!(bidi::visual("ملف جديد"), "جديد ملف");
 }

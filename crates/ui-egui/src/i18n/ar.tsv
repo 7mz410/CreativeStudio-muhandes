@@ -1,0 +1,91 @@
+# muhandes (Creative Studio, built on CADCraft) Arabic interface catalog.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Original Arabic translations of the core menus and tools; every other string shows in English
+# until it is translated (see studio/ar-work/TODO.md).
+# UTF-8: context<TAB>English source<TAB>Arabic translation, in logical order. The runtime turns
+# each translation into visual order (i18n/bidi.rs) because egui lays text out left to right.
+	File	ملف
+	Edit	تحرير
+	View	عرض
+	Insert	إدراج
+	Format	تنسيق
+	Tools	أدوات
+	Draw	رسم
+	Dimension	قياس
+	Modify	تعديل
+	Window	نافذة
+	Help	مساعدة
+	Open...	فتح...
+	Save As...	حفظ باسم...
+	Tool Bar	شريط الأدوات
+	Command Line	سطر الأوامر
+	Status Bar	شريط الحالة
+	Layers Palette	لوحة الطبقات
+	Properties Inspector	مفتش الخصائص
+	Tool Sets	مجموعات الأدوات
+	Language	اللغة
+	Interface Language	لغة الواجهة
+	Interface Theme	سمة الواجهة
+	Start	البداية
+	Hide Palettes	إخفاء اللوحات
+	Reset Palettes	إعادة ضبط اللوحات
+	Quit muhandes	إنهاء مهندس
+	About muhandes	حول مهندس
+	Command Reference	مرجع الأوامر
+	Command History	سجل الأوامر
+	Auto (system language)	تلقائي (لغة النظام)
+	Default Save Format	تنسيق الحفظ الافتراضي
+	Layer Properties Manager	مدير خصائص الطبقات
+	Parameters Manager	مدير المعاملات
+	Drafting Settings...	إعدادات الرسم...
+	Quick Select...	تحديد سريع...
+	Blocks	الكتل
+	Make...	إنشاء كتلة...
+	Block...	إدراج كتلة...
+	Hatch...	تظليل...
+	Print...	طباعة...
+	Layers	الطبقات
+	Line	خط
+	Polyline	خط متعدد
+	Circle	دائرة
+	Arc	قوس
+	Rectangle	مستطيل
+	Polygon	مضلع
+	Ellipse	قطع ناقص
+	Point	نقطة
+	Spline	منحنى
+	Single Line Text	نص من سطر واحد
+	Multiline Text	نص متعدد الأسطر
+	Array	مصفوفة
+	Move	نقل
+	Copy	نسخ
+	Rotate	تدوير
+	Scale	تحجيم
+	Mirror	انعكاس
+	Stretch	مط
+	Offset	إزاحة
+	Trim	قص
+	Extend	تمديد
+	Fillet	تقويس الزوايا
+	Chamfer	شطب الزوايا
+	Explode	تفكيك
+	Break	كسر
+	Join	دمج
+	Erase	حذف
+	Undo	تراجع
+	Redo	إعادة
+	Zoom	تكبير
+	Pan	تحريك العرض
+	Group	تجميع
+	Audit	تدقيق
+	Purge	تنظيف
+	Linear	خطي
+	Cancel	إلغاء
+	OK	موافق
+	Save	حفظ
+	Close	إغلاق
+	Yes	نعم
+	No	لا
+	New	جديد
+	Print	طباعة
+	muhandes	مهندس

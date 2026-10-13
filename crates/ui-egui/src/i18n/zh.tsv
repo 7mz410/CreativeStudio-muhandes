@@ -28,7 +28,7 @@
 	= Equals	= 等于
 	> Greater than	> 大于
 	About	关于
-	About CADCraft	关于 CADCraft
+	About muhandes	关于 muhandes
 	Absolute	绝对
 	Add Leader	添加引线
 	Align	对齐
@@ -83,7 +83,7 @@
 	ByBlock	ByBlock
 	ByColor	ByColor
 	ByLayer	ByLayer
-	CADCraft Help	CADCraft 帮助
+	muhandes Help	muhandes 帮助
 	Cancel	取消
 	Cartesian (x, y)	笛卡尔坐标 (x, y)
 	Center	中心
@@ -586,7 +586,7 @@
 	Quick Select Properties	快速选择特性
 	Quick Select...	快速选择...
 	QuickCalc	快速计算器
-	Quit CADCraft	退出 CADCraft
+	Quit muhandes	退出 muhandes
 	Radius	半径
 	Raster Image	光栅图像
 	Ray	射线
@@ -990,7 +990,7 @@
 @plural	{n} contributor	{n} 位贡献者|{n} 位贡献者
 	Drawing as bytes	字节形式的图形
 	Services	服务
-	Hide CADCraft	隐藏 CADCraft
+	Hide muhandes	隐藏 muhandes
 	Hide Others	隐藏其他人
 	Accessibility	辅助功能
 	Show System Cursor	显示系统光标

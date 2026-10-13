@@ -195,8 +195,8 @@ pub struct CadApp {
     /// Caps the frame rate when presenting without vsync (see [`gpu::FrameCap`]).
     #[cfg(not(target_arch = "wasm32"))]
     pub frame_cap: Option<gpu::FrameCap>,
-    /// Interface fonts installed, and whether with a CJK font (`None` until the first frame).
-    fonts_cjk: Option<bool>,
+    /// Interface fonts installed, and whether with a CJK or an Arabic font (`None` until the first frame).
+    fonts_script: Option<(bool, bool)>,
     /// The theme last installed into egui (`None` until the first frame).
     shown_theme: Option<egui::Theme>,
     /// Whether the last applied theme was handed to egui as the System preference.
@@ -238,7 +238,7 @@ impl CadApp {
             synthetic: Vec::new(),
             #[cfg(not(target_arch = "wasm32"))]
             frame_cap: None,
-            fonts_cjk: None,
+            fonts_script: None,
             shown_theme: None,
             shown_follows_system: false,
             frame_ms: 0.0,
@@ -372,7 +372,7 @@ impl CadApp {
     pub fn open_size_error(name: &str, len: u64) -> Option<String> {
         (len > Self::MAX_OPEN_BYTES).then(|| {
             format!(
-                "Open: {name} is {:.1} MB, larger than the {} MB CADCraft opens in the browser",
+                "Open: {name} is {:.1} MB, larger than the {} MB muhandes opens in the browser",
                 len as f64 / 1048576.0,
                 Self::MAX_OPEN_BYTES >> 20
             )
@@ -414,10 +414,11 @@ impl CadApp {
         if ctx.input(|i| i.viewport().close_requested()) && self.request_quit() {
             ctx.send_viewport_cmd(egui::ViewportCommand::CancelClose);
         }
-        let cjk = self.language().starts_with("zh");
-        if self.fonts_cjk != Some(cjk) {
-            theme::install_fonts(ctx, cjk);
-            self.fonts_cjk = Some(cjk);
+        let language = self.language();
+        let script = (language.starts_with("zh"), language == "ar");
+        if self.fonts_script != Some(script) {
+            theme::install_fonts(ctx, script.0, script.1);
+            self.fonts_script = Some(script);
         }
         // Resolved every frame, so a System choice follows the OS appearance live (winit and the
         // browser report changes as input); the saved choice itself never changes here.
@@ -675,7 +676,7 @@ mod tests {
     #[test]
     fn default_save_format_persists_and_names_new_drawings() {
         let mut a = app();
-        assert_eq!(a.ui.save_format, SaveFormat::Dxf, "default keeps DXF, CADCraft's native format");
+        assert_eq!(a.ui.save_format, SaveFormat::Dxf, "default keeps DXF, muhandes's native format");
         assert!(a.run("ui.saveformat", json!({ "format": "pdf" })).is_err());
         assert_eq!(a.run("ui.saveformat", json!({ "format": "DWG" })).ok(), Some(json!({ "saveFormat": "dwg" })));
         assert_eq!(a.run("ui.saveformat", json!({})).ok(), Some(json!({ "saveFormat": "dwg" })), "no format: report it");

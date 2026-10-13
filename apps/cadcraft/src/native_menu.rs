@@ -33,15 +33,15 @@ impl NativeMenu {
         let language = app.language();
         let mut submenus = Vec::new();
         let mut counter = 0usize;
-        let app_menu = Submenu::new("CADCraft", true);
-        let about = MenuItem::with_id("cc-about", i18n::tr(language, "About CADCraft"), true, None);
+        let app_menu = Submenu::new("muhandes", true);
+        let about = MenuItem::with_id("cc-about", i18n::tr(language, "About muhandes"), true, None);
         let discord = MenuItem::with_id("cc-discord", i18n::tr(language, "Join the ArtCraft Discord…"), true, None);
         let predefined = vec![
             ("Services", PredefinedMenuItem::services(Some(i18n::tr(language, "Services")))),
-            ("Hide CADCraft", PredefinedMenuItem::hide(Some(i18n::tr(language, "Hide CADCraft")))),
+            ("Hide muhandes", PredefinedMenuItem::hide(Some(i18n::tr(language, "Hide muhandes")))),
             ("Hide Others", PredefinedMenuItem::hide_others(Some(i18n::tr(language, "Hide Others")))),
             ("Show All", PredefinedMenuItem::show_all(Some(i18n::tr(language, "Show All")))),
-            ("Quit CADCraft", PredefinedMenuItem::quit(Some(i18n::tr(language, "Quit CADCraft")))),
+            ("Quit muhandes", PredefinedMenuItem::quit(Some(i18n::tr(language, "Quit muhandes")))),
         ];
         // The Mac place for preferences: CADCraft ▸ Settings… (⌘,) opens the Options dialog.
         let settings = MenuItem::with_id("cc-settings", i18n::tr(language, "Settings..."), true, accel("Cmd+Comma"));
@@ -52,7 +52,7 @@ impl NativeMenu {
                 let _ = app_menu.append(&PredefinedMenuItem::separator());
             }
         }
-        items.insert("cc-about".into(), ("ui.dialog.about".into(), "About CADCraft".into(), about));
+        items.insert("cc-about".into(), ("ui.dialog.about".into(), "About muhandes".into(), about));
         items.insert("cc-discord".into(), ("ui.discord".into(), "Join the ArtCraft Discord…".into(), discord));
         items.insert("cc-settings".into(), ("options".into(), "Settings...".into(), settings));
         let _ = menu.append(&app_menu);

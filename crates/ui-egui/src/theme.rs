@@ -302,7 +302,7 @@ pub fn mono() -> FontId {
 }
 
 /// Load a system UI font at run time when one is installed (not bundled), else keep egui's.
-pub fn install_fonts(ctx: &egui::Context, cjk: bool) {
+pub fn install_fonts(ctx: &egui::Context, cjk: bool, arabic: bool) {
     #[cfg(not(target_arch = "wasm32"))]
     {
         let candidates: &[&str] = if cfg!(target_os = "macos") {
@@ -336,10 +336,19 @@ pub fn install_fonts(ctx: &egui::Context, cjk: bool) {
                 }
             }
         }
+        // Arabic: an installed Arabic font after the others (egui's own fonts have no Arabic).
+        if let Some(bytes) = arabic.then(arabic_font).flatten().and_then(|p| read_capped(p, MAX_UI_FONT_BYTES)) {
+            fonts.font_data.insert("system-arabic".into(), std::sync::Arc::new(egui::FontData::from_owned(bytes)));
+            for family in [FontFamily::Proportional, FontFamily::Monospace] {
+                if let Some(f) = fonts.families.get_mut(&family) {
+                    f.push("system-arabic".into());
+                }
+            }
+        }
         ctx.set_fonts(fonts);
     }
     #[cfg(target_arch = "wasm32")]
-    let _ = (ctx, cjk);
+    let _ = (ctx, cjk, arabic);
 }
 
 /// Largest interface font file read (CJK collections are 15–60 MB).
@@ -388,9 +397,41 @@ pub fn cjk_font() -> Option<&'static std::path::Path> {
     None
 }
 
-/// Whether the interface can show `language`: Chinese needs an installed CJK font.
+/// An installed font with Arabic letters, for the Arabic interface (not bundled, like the CJK font).
+/// Checked once.
+pub fn arabic_font() -> Option<&'static std::path::Path> {
+    #[cfg(not(target_arch = "wasm32"))]
+    {
+        static FOUND: std::sync::OnceLock<Option<std::path::PathBuf>> = std::sync::OnceLock::new();
+        FOUND
+            .get_or_init(|| {
+                let candidates: &[&str] = if cfg!(target_os = "macos") {
+                    &["/System/Library/Fonts/GeezaPro.ttc", "/System/Library/Fonts/Supplemental/Arial.ttf"]
+                } else if cfg!(windows) {
+                    &["C:\\Windows\\Fonts\\arial.ttf", "C:\\Windows\\Fonts\\tahoma.ttf"]
+                } else {
+                    &[
+                        "/usr/share/fonts/truetype/noto/NotoSansArabic-Regular.ttf",
+                        "/usr/share/fonts/noto/NotoSansArabic-Regular.ttf",
+                        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+                        "/usr/share/fonts/TTF/DejaVuSans.ttf",
+                    ]
+                };
+                candidates.iter().map(std::path::PathBuf::from).find(|p| p.is_file())
+            })
+            .as_deref()
+    }
+    #[cfg(target_arch = "wasm32")]
+    None
+}
+
+/// Whether the interface can show `language`: Chinese and Arabic need an installed font for them.
 pub fn can_show(language: &str) -> bool {
-    !language.starts_with("zh") || cjk_font().is_some()
+    match language {
+        l if l.starts_with("zh") => cjk_font().is_some(),
+        "ar" => arabic_font().is_some(),
+        _ => true,
+    }
 }
 
 /// egui's visuals for `theme`, from its tokens.

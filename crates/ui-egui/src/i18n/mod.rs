@@ -8,6 +8,8 @@ use std::sync::OnceLock;
 
 use serde::{Deserialize, Serialize};
 
+pub mod bidi;
+
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq, Serialize, Deserialize)]
 pub enum Preference {
     #[default]
@@ -31,10 +33,12 @@ pub enum Preference {
     French,
     #[serde(rename = "zh")]
     Chinese,
+    #[serde(rename = "ar")]
+    Arabic,
 }
 
 impl Preference {
-    pub const ALL: [Self; 10] = [
+    pub const ALL: [Self; 11] = [
         Self::Auto,
         Self::English,
         Self::Ukrainian,
@@ -45,6 +49,7 @@ impl Preference {
         Self::Russian,
         Self::French,
         Self::Chinese,
+        Self::Arabic,
     ];
 
     /// The codes a preference can be given as, for messages ("auto, en or uk").
@@ -68,6 +73,7 @@ impl Preference {
             Self::Russian => "ru",
             Self::French => "fr",
             Self::Chinese => "zh",
+            Self::Arabic => "ar",
         }
     }
 
@@ -83,6 +89,7 @@ impl Preference {
             Self::Russian => "Русский",
             Self::French => "Français",
             Self::Chinese => "简体中文",
+            Self::Arabic => "العربية",
         }
     }
 
@@ -106,6 +113,7 @@ impl Preference {
             Self::Russian => "ru",
             Self::French => "fr",
             Self::Chinese => "zh",
+            Self::Arabic => "ar",
             Self::Auto => locales.iter().find_map(|s| locale_language(s)).unwrap_or("en"),
         }
     }
@@ -122,7 +130,7 @@ pub struct Language {
     catalog: OnceLock<Catalog<'static>>,
 }
 
-pub static LANGUAGES: [Language; 9] = [
+pub static LANGUAGES: [Language; 10] = [
     Language { code: "en", name: "English", source: "", plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
     Language {
         code: "uk", name: "Українська", source: include_str!("uk.tsv"), plural: plural_uk, plural_forms: 3, catalog: OnceLock::new()
@@ -147,6 +155,10 @@ pub static LANGUAGES: [Language; 9] = [
     // Chinese has no grammatical plural: both `@plural` forms read the same. Its glyphs come from
     // an installed CJK font (`theme::cjk_font`); without one the interface stays English.
     Language { code: "zh", name: "简体中文", source: include_str!("zh.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Arabic: a partial catalog (core menus and tools, see studio/ar-work/TODO.md); the rest shows in
+    // English. Its glyphs come from an installed Arabic font (`theme::arabic_font`). Right-to-left
+    // text is stored in visual order (`bidi`), since the interface lays text out left to right.
+    Language { code: "ar", name: "العربية", source: include_str!("ar.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
 ];
 
 /// BCP 47 and POSIX locale tags, including `uk-UA`, `uk_UA.UTF-8` and `pt_BR.UTF-8`.
@@ -196,7 +208,19 @@ fn parse(source: &str) -> (Catalog<'_>, Vec<String>) {
 }
 
 fn catalog(language: &str) -> Option<&'static Catalog<'static>> {
-    LANGUAGES.iter().find(|l| l.code == language && !l.source.is_empty()).map(|l| l.catalog.get_or_init(|| parse(l.source).0))
+    LANGUAGES.iter().find(|l| l.code == language && !l.source.is_empty()).map(|l| l.catalog.get_or_init(|| parse(l.text()).0))
+}
+
+impl Language {
+    /// The catalog text as read: right-to-left catalogs are reordered once, here.
+    fn text(&self) -> &'static str {
+        if bidi::RTL_CODES.contains(&self.code) {
+            // Leaked once per language (the catalog lives as long as the program).
+            Box::leak(bidi::visual_catalog(self.source).into_boxed_str())
+        } else {
+            self.source
+        }
+    }
 }
 
 pub fn tr<'a>(language: &str, source: &'a str) -> &'a str {

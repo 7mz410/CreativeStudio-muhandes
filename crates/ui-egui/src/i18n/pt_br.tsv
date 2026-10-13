@@ -28,7 +28,7 @@
 	= Equals	= Igual a
 	> Greater than	> Maior que
 	About	Sobre
-	About CADCraft	Sobre o CADCraft
+	About muhandes	Sobre o muhandes
 	Absolute	Absoluto
 	Add Leader	Adicionar linha de chamada
 	Align	Alinhar
@@ -83,7 +83,7 @@
 	ByBlock	PorBloco
 	ByColor	PorCor
 	ByLayer	PorCamada
-	CADCraft Help	Ajuda do CADCraft
+	muhandes Help	Ajuda do muhandes
 	Cancel	Cancelar
 	Cartesian (x, y)	Cartesiano (x, y)
 	Center	Centro
@@ -587,7 +587,7 @@
 	Quick Select Properties	Propriedades da seleção rápida
 	Quick Select...	Seleção rápida...
 	QuickCalc	Calculadora
-	Quit CADCraft	Sair do CADCraft
+	Quit muhandes	Sair do muhandes
 	Radius	Raio
 	Raster Image	Imagem raster
 	Ray	Semirreta
@@ -991,7 +991,7 @@
 @plural	{n} contributor	{n} colaborador|{n} colaboradores
 	Drawing as bytes	Desenho como bytes
 	Services	Serviços
-	Hide CADCraft	Ocultar o CADCraft
+	Hide muhandes	Ocultar o muhandes
 	Hide Others	Ocultar outros
 	Accessibility	Acessibilidade
 	Show System Cursor	Exibir cursor do sistema
