@@ -20,5 +20,5 @@ jobs:
       app: muhandes
       package: cadcraft
       version_var: CADCRAFT_VERSION
-      bundle: CADCraft.app
+      bundle: muhandes.app
       tag: ${{ github.ref_name }}
