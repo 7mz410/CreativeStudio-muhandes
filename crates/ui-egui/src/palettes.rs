@@ -313,19 +313,24 @@ pub fn right_palettes(app: &mut CadApp, ui: &mut egui::Ui) {
         return;
     }
     let t = Tokens::get();
-    egui::Panel::right("cc_palettes").exact_size(300.0).resizable(false).frame(egui::Frame::NONE.fill(t.panel)).show(ui, |ui| {
+    // Creative Studio: right to left, the palettes sit on the left.
+    let panel = if egui::is_rtl() { egui::Panel::left("cc_palettes") } else { egui::Panel::right("cc_palettes") };
+    panel.exact_size(300.0).resizable(false).frame(egui::Frame::NONE.fill(t.panel)).show(ui, |ui| {
         let r = ui.max_rect();
         // Palette icon tabs.
         let p = ui.painter().clone();
         let tab_h = 30.0;
         p.rect_filled(Rect::from_min_size(r.min, vec2(r.width(), tab_h)), 0.0, t.chrome);
+        // Creative Studio: the tabs and the collapse button start from the panel's start edge.
+        let rtl = egui::is_rtl();
+        let at = |from_start: f32| if rtl { r.right() - from_start } else { r.left() + from_start };
         for (i, icon) in [Icon::Layers, Icon::Blocks, Icon::Properties].iter().enumerate() {
-            let br = Rect::from_center_size(pos2(r.left() + 30.0 + i as f32 * 52.0, r.top() + tab_h / 2.0), vec2(20.0, 20.0));
+            let br = Rect::from_center_size(pos2(at(30.0 + i as f32 * 52.0), r.top() + tab_h / 2.0), vec2(20.0, 20.0));
             icons::paint(&p, br, *icon, false);
         }
-        let cr = Rect::from_center_size(pos2(r.right() - 14.0, r.top() + tab_h / 2.0), vec2(14.0, 14.0));
+        let cr = Rect::from_center_size(pos2(at(14.0), r.top() + tab_h / 2.0), vec2(14.0, 14.0));
         let cresp = ui.interact(cr, ui.id().with("palettes_collapse"), Sense::click());
-        icons::paint(&p, cr, Icon::ChevronRight, false);
+        icons::paint(&p, cr, if rtl { Icon::ChevronLeft } else { Icon::ChevronRight }, false);
         icons::describe_control(ui, &cresp, "Collapse Palettes", None, false);
         if cresp.on_hover_text(crate::tl!("Collapse Palettes")).clicked() {
             app.ui.show_palettes = false;

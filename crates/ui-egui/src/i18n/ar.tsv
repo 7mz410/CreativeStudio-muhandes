@@ -1,7 +1,7 @@
 # muhandes (Creative Studio, built on CADCraft) Arabic interface catalog.
 # License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
-# Original Arabic translations of the core menus and tools; every other string shows in English
-# until it is translated (see studio/ar-work/TODO.md).
+# Original Arabic translations of the interface (menus, tools, dialogs, prompts and messages).
+# Plural rows give two forms (singular, other), as the English rule does.
 # UTF-8: context<TAB>English source<TAB>Arabic translation, in logical order. The runtime turns
 # each translation into visual order (i18n/bidi.rs) because egui lays text out left to right.
 	File	ملف
@@ -89,3 +89,1148 @@
 	New	جديد
 	Print	طباعة
 	muhandes	مهندس
+	Apply	تطبيق
+	Attach DWG...	إرفاق DWG...
+	Bind	تضمين
+	Detach	فصل
+	Loaded	محمّل
+	Make it a block of this drawing, keeping its layer names	اجعله كتلة لهذا الرسم مع الاحتفاظ بأسماء طبقاته
+	Make it a block of this drawing; its layers become NAME$0$LAYER	اجعله كتلة لهذا الرسم؛ ستصبح طبقاته NAME$0$LAYER
+	No external references are attached.	لم يُرفق أي مرجع خارجي.
+	Not Found	غير موجود
+	Not loaded	غير محمّل
+	Open	فتح
+	Overlay	تراكب
+	Reference Manager	مدير المراجع
+	Reference Name	اسم المرجع
+	References: {n}	المراجع: {n}
+	Reload	إعادة تحميل
+	Reload All	إعادة تحميل الكل
+	Saved Path	المسار المحفوظ
+	Unload	إلغاء التحميل
+	Unloaded	مُلغى التحميل
+	Unreferenced	غير مُشار إليه
+	Unresolved	غير محلول
+	  Cancel  	  إلغاء
+	  OK  	  موافق
+	 or [	 أو [
+	% of all commits	% من إجمالي التعديلات
+	* Wildcard Match	* مطابقة بنمط بدل
+	*VARIES*	*مختلف*
+	+  |  Top  |  2D Wireframe	+  |  من الأعلى  |  هيكل سلكي ثنائي الأبعاد
+	+Bin	+ثنائي
+	+LOC	+أسطر
+	1 Viewport	منفذ عرض واحد
+	2 Points	نقطتان
+	2 Viewports	منفذا عرض
+	2D Solid	تعبئة ثنائية الأبعاد
+	3 Points	3 نقاط
+	3 Viewports	3 منافذ عرض
+	3D Face	وجه ثلاثي الأبعاد
+	3D Operations	عمليات ثلاثية الأبعاد
+	3D Polyline	خط متعدد ثلاثي الأبعاد
+	4 Viewports	4 منافذ عرض
+	< Less than	< أصغر من
+	<> Not Equal	<> لا يساوي
+	= Equals	= يساوي
+	> Greater than	> أكبر من
+	A variable name starts with a letter and has only letters, digits and _	يبدأ اسم المتغيّر بحرف ولا يحتوي إلا على حروف وأرقام و_
+	About	حول
+	Absolute	مطلقة
+	Add Leader	إضافة خط إرشادي
+	Additional angles	زوايا إضافية
+	Align	محاذاة
+	Align Text	محاذاة النص
+	Aligned	محاذي
+	All	الكل
+	All Annotation Objects	كل كائنات التعليقات التوضيحية
+	All Used Layers	كل الطبقات المستخدمة
+	All files	كل الملفات
+	Angle	زاوية
+	Angular	زاوي
+	Annotation Visibility	رؤية التعليقات التوضيحية
+	Annotation scale	مقياس التعليقات التوضيحية
+	Apparent Intersection	التقاطع الظاهري
+	Append to current selection set	إلحاق بمجموعة التحديد الحالية
+	Apply to:	تطبيق على:
+	Apply true color	تطبيق لون RGB حقيقي
+	Arc Length	طول القوس
+	Area	المساحة
+	Arrange Panel	ترتيب اللوحة
+	Attach	إرفاق
+	Attribute	سمة
+	Attribute Definition	تعريف السمة
+	Attribute Display	عرض السمات
+	Auto Constrain	قيود تلقائية
+	AutoConstrain	قيود تلقائية
+	Axis, End	المحور، النهاية
+	Base	قاعدة
+	Baseline	خط الأساس
+	Batch Publish	النشر الدفعي
+	Binary assets added	أُضيفت أصول ثنائية
+	Binary assets removed	أُزيلت أصول ثنائية
+	Bind...	تضمين...
+	Blend	مزج
+	Block	كتلة
+	Block Attribute Manager...	مدير سمات الكتل...
+	Block Editor	محرر الكتل
+	Block Reference	مرجع كتلة
+	Blue	أزرق
+	Bold	عريض
+	Boolean	منطقي
+	Boundary	حد
+	Boundary...	حد...
+	Box	صندوق
+	Break At Point	كسر عند نقطة
+	Bring Above Objects	فوق الكائنات
+	Bring Annotations to Front	التعليقات التوضيحية إلى المقدمة
+	Bring to Front	إلى المقدمة
+	Bulleted list	قائمة نقطية
+	ByBlock	حسب الكتلة
+	ByColor	حسب اللون
+	ByLayer	حسب الطبقة
+	muhandes Help	مساعدة مهندس
+	Cartesian (x, y)	ديكارتية (x, y)
+	Center	المركز
+	Center Line	خط المركز
+	Center Mark	علامة المركز
+	Center X	المركز X
+	Center Y	المركز Y
+	Center Z	المركز Z
+	Center, Diameter	المركز، القطر
+	Center, Radius	المركز، نصف القطر
+	Center, Start, Angle	المركز، البداية، الزاوية
+	Center, Start, End	المركز، البداية، النهاية
+	Center, Start, Length	المركز، البداية، الطول
+	Change Space	تغيير الفضاء
+	Change to Current Layer	نقل إلى الطبقة الحالية
+	Changed: {n}	مُعدّل: {n}
+	Circumference	محيط الدائرة
+	Clear History	مسح السجل
+	Clear	مسح
+	Clip	قص
+	Clip Viewport	قص منفذ العرض
+	Clipboard	الحافظة
+	Close All	إغلاق الكل
+	Close All Other Drawings	إغلاق كل الرسومات الأخرى
+	Closed	مغلق
+	Close Comparison	إغلاق المقارنة
+	Coincident	تطابق
+	Collapse Palettes	طي اللوحات
+	Collapse Tool Sets	طي مجموعات الأدوات
+	Collinear	على استقامة واحدة
+	Color	اللون
+	Color 8	اللون 8
+	Color 9	اللون 9
+	Color Index	فهرس اللون
+	Color...	اللون...
+	Command Aliases	الأسماء المستعارة للأوامر
+	Clear Command History	مسح سجل الأوامر
+	Command Line History Lines	أسطر سجل سطر الأوامر
+	Commits	التعديلات
+	Company	الشركة
+	Compare Drawings...	مقارنة الرسومات...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	تصميم بمساعدة الحاسوب والرسم: تطبيق CAD مفتوح المصدر ومكتوب بلغة Rust بالكامل ودون الاستناد إلى كود مملوك.
+	Concentric	متحد المركز
+	Cone	مخروط
+	Constraint Bars	أشرطة القيود
+	Constraint Settings	إعدادات القيود
+	Construction Line	خط إنشائي
+	Contents	المحتوى
+	Continue	متابعة
+	Contributors	المساهمون
+	Control Vertices	نقاط التحكم
+	Convert	تحويل
+	Copy Full File Path	نسخ المسار الكامل للملف
+	Copy History	نسخ السجل
+	Copy Layout	نسخ التخطيط
+	Copy Nested Objects	نسخ الكائنات المتداخلة
+	Copy Selection	نسخ التحديد
+	Copy with Base Point	نسخ بنقطة أساس
+	Count	العدد
+	Count List	قائمة العد
+	Count Table	جدول العد
+	Create Block	إنشاء كتلة
+	Creates a user parameter	ينشئ معامل مستخدم
+	Ctrl+Enter to finish	Ctrl+Enter للإنهاء
+	Current layer	الطبقة الحالية
+	Current selection	التحديد الحالي
+	Current: {color}	الحالي: {color}
+	Cut	قص
+	Cyan	سماوي
+	Cylinder	أسطوانة
+	DWG	DWG
+	DWG Reference...	مرجع DWG...
+	DXF	DXF
+	Dark	داكن
+	Data Extraction...	استخراج البيانات...
+	Default	افتراضي
+	Data Link...	ربط بالبيانات...
+	Default Save Version	إصدار الحفظ الافتراضي
+	Define Attributes	تعريف السمات
+	Define Attributes...	تعريف السمات...
+	Defined width	العرض المحدد
+	Degree	درجة
+	Degrees of Freedom	درجات الحرية
+	Degrees of freedom: {n}	درجات الحرية: {n}
+	Delete	حذف
+	Delete Column	حذف العمود
+	Delete Constraints	حذف القيود
+	Delete Dimension Style	حذف نمط القياس
+	Delete Duplicate Objects	حذف الكائنات المكررة
+	Delete Layer	حذف الطبقة
+	Delete Layer State	حذف حالة الطبقات
+	Delete Layout	حذف التخطيط
+	Delete Row	حذف الصف
+	Delete Text Style	حذف نمط النص
+	Delta X	الفرق في X
+	Delta Y	الفرق في Y
+	Description	الوصف
+	Deselect All	إلغاء تحديد الكل
+	Diameter	القطر
+	Dim style	نمط القياس
+	Dimension Break	فاصل القياس
+	Dimension Edit	تحرير القياس
+	Dimension Objects Only	الكائنات البُعدية فقط
+	Dimension Space	المسافة بين القياسات
+	Dimension Style Override	تجاوز نمط القياس
+	Dimension Style...	نمط القياس...
+	Dimension Text Edit	تحرير نص القياس
+	Dimension style	نمط القياس
+	Dimensional Constraint	قيد بُعدي
+	Dimensional Constraint Parameters	معاملات القيود البُعدية
+	Dimensional Constraints	القيود البُعدية
+	Disassociate Dimensions	فصل القياسات
+	Display name	الاسم المعروض
+	Distance	المسافة
+	Divide	قسمة
+	Do not plot (click: plot)	عدم الطباعة (انقر للطباعة)
+	Donut	حلقة
+	Double-click to edit the description	انقر مرتين لتحرير الوصف
+	Down	لأسفل
+	Drafting	الرسم
+	Drafting Settings	إعدادات الرسم
+	Draw Order	ترتيب العرض
+	Drawing (DWG)	رسم (DWG)
+	Drawing (DXF)	رسم (DXF)
+	Drawing Limits	حدود الرسم
+	Drawing Template (DWT)	قالب الرسم (DWT)
+	Drawing Utilities	أدوات الرسم
+	Drawings (DWG, DXF)	الرسومات (DWG, DXF)
+	SVG drawings (SVG, SVGZ)	رسومات SVG (SVG, SVGZ)
+	Dynamic	ديناميكي
+	Dynamic Dimensions	القياسات الديناميكية
+	Dynamic Input	الإدخال الديناميكي
+	Dynamic Input (F12)	الإدخال الديناميكي (F12)
+	E	شر
+	Edit Attributes...	تحرير السمات...
+	Edit Text...	تحرير النص...
+	Edit Table Cell	تحرير خلية الجدول
+	Elevation	الارتفاع
+	Elliptical Arc	قوس إهليلجي
+	Enable Dynamic Input (F12)	تفعيل الإدخال الديناميكي (F12)
+	End Object Isolation	إنهاء عزل الكائنات
+	End Width	العرض النهائي
+	End X	نهاية X
+	End Y	نهاية Y
+	End angle	الزاوية النهائية
+	Endpoint	نقطة النهاية
+	Enter	إدخال
+	Enter Top, Zero or Bottom.	أدخل Top أو Zero أو Bottom.
+	Enter a fit data option	أدخل خيار ملاءمة البيانات
+	Enter a pattern name	أدخل اسم النمط
+	Enter a vertex editing option	أدخل خيار تحرير الرؤوس
+	Enter an option	أدخل خيارًا
+	Enter angle of xline	أدخل زاوية الخط الإنشائي
+	Enter angle of xline (0) or	أدخل زاوية الخط الإنشائي (0) أو
+	Enter area of rectangle in current units	أدخل مساحة المستطيل بالوحدات الحالية
+	Enter attribute prompt	أدخل موجه السمة
+	Enter attribute tag name	أدخل اسم وسم السمة
+	Enter attribute value	أدخل قيمة السمة
+	Enter block name	أدخل اسم الكتلة
+	Enter constraint type	أدخل نوع القيد
+	Enter continuity	أدخل نوع الاستمرارية
+	Enter default attribute value	أدخل القيمة الافتراضية للسمة
+	Enter degree of spline	أدخل درجة المنحنى
+	Enter delta angle	أدخل مقدار تغيّر الزاوية
+	Enter delta length or	أدخل مقدار تغيّر الطول أو
+	Enter dimension text	أدخل النص البُعدي
+	Enter dimension text (<> = measurement)	أدخل النص البُعدي (<> = القيمة المقاسة)
+	Enter dimension value or [name=expression]	أدخل القيمة البُعدية أو [name=expression]
+	Enter dimension variable name to override	أدخل اسم متغيّر القياس للتجاوز
+	Enter justification type	أدخل نوع المحاذاة
+	Enter leader text	أدخل نص الخط الإرشادي
+	Enter mline scale	أدخل مقياس الخط المتعدد
+	Enter mode	أدخل الوضع
+	Enter name of block to insert	أدخل اسم الكتلة المراد إدراجها
+	Enter new text	أدخل النص الجديد
+	Enter next point	أدخل النقطة التالية
+	Enter number of columns	أدخل عدد الأعمدة
+	Enter number of data rows	أدخل عدد صفوف البيانات
+	Enter number of items	أدخل عدد العناصر
+	Enter number of items along path	أدخل عدد العناصر على طول المسار
+	Enter number of sides	أدخل عدد الأضلاع
+	Enter number of turns	أدخل عدد اللفات
+	Enter percentage length	أدخل الطول كنسبة مئوية
+	Enter rectangle length	أدخل طول المستطيل
+	Enter rectangle width	أدخل عرض المستطيل
+	Enter scale factor	أدخل معامل التحجيم
+	Enter text	أدخل النص
+	Enter text (use \P for new paragraphs)	أدخل النص (استخدم \P لبدء فقرة جديدة)
+	Enter the number of segments	أدخل عدد المقاطع
+	Enter twist direction of helix	أدخل اتجاه لف الحلزون
+	Entire drawing	الرسم كله
+	Equal	المساواة
+	Evaluate	احسب
+	Exclude from new selection set	استبعاد من مجموعة التحديد الجديدة
+	Export	تصدير
+	Export Table	تصدير الجدول
+	Export to PDF...	تصدير إلى PDF...
+	Expression	تعبير
+	Extension	الامتداد
+	Extents	المدى
+	External Reference	مرجع خارجي
+	External References	مراجع خارجية
+	Extrude	بثق
+	File Tab	تبويب الملف
+	Filter	تصفية
+	Filters	مرشّحات
+	Find and Replace	بحث واستبدال
+	Find...	بحث...
+	First	الأول
+	First commit	الالتزام الأول
+	Fit Points	نقاط الملاءمة
+	Fix	تثبيت
+	Flatten Objects	تسطيح الكائنات
+	Freehand	حرّ
+	Freeze	تجميد
+	Freeze Layer	تجميد الطبقة
+	Freeze in new viewports	تجميد في منافذ العرض الجديدة
+	Freeze/Thaw	تجميد/إلغاء تجميد
+	Freeze/Thaw in all viewports	تجميد/إلغاء تجميد في كل منافذ العرض
+	Freeze/Thaw in the current viewport	تجميد/إلغاء تجميد في منفذ العرض الحالي
+	From	من
+	From Template...	من قالب...
+	General	عام
+	Geometric Center	المركز الهندسي
+	Geometric Constraint	قيد هندسي
+	Geometric Constraints	قيود هندسية
+	Geometry	الهندسة
+	Get from the Drawing	خذ من الرسم
+	Get Variable	الحصول على المتغير
+	Get View	الحصول على العرض
+	Global	عام
+	Global width	العرض العام
+	Grab bag	مجموعة متنوعة
+	Gradient	تدرج
+	Gradient...	تدرج...
+	Green	أخضر
+	Grid (F7)	الشبكة (F7)
+	Grid Display	عرض الشبكة
+	Grid On (F7)	تشغيل الشبكة (F7)
+	Grid snap	التقاط الشبكة
+	Grid spacing	تباعد الشبكة
+	Grip Edit	تحرير بالمقابض
+	Grip Mirror	انعكاس بالمقابض
+	Grip Option	خيار المقبض
+	Grip Rotate	تدوير بالمقابض
+	Grip Scale	تحجيم بالمقابض
+	Grip Stretch	تمديد بالمقابض
+	Group Edit	تحرير المجموعة
+	Group Options	خيارات المجموعة
+	Group Selection	تحديد المجموعات
+	Hatch	تظليل
+	Hatch Edit	تحرير التظليل
+	Hatch Patterns	أنماط التظليل
+	Height	الارتفاع
+	Height: {height}	الارتفاع: {height}
+	Helix	حلزون
+	Hide All	إخفاء الكل
+	Hide All Constraint Bars	إخفاء كل أشرطة القيود
+	Hide All Dynamic Dimensions	إخفاء كل القياسات الديناميكية
+	Hide Layer List	إخفاء قائمة الطبقات
+	Hide Objects	إخفاء الكائنات
+	History	السجل
+	Home	الصفحة الرئيسية
+	Horizontal	أفقي
+	HorizontalDistance	المسافة الأفقية
+	How to apply:	طريقة التطبيق:
+	ID Point	نقطة المعرّف
+	Import	استيراد
+	In	تكبير
+	In-window Menu Bar	شريط القوائم داخل النافذة
+	Include in new selection set	إضافة إلى مجموعة التحديد الجديدة
+	Increment angle	زاوية الزيادة
+	Index Color	لون مفهرس
+	Index color: {index}	اللون المفهرس: {index}
+	Infer Constraints	استنتاج القيود
+	Inquiry	استعلام
+	Insert Block	إدراج كتلة
+	Insert Column	إدراج عمود
+	Insert Row	إدراج صف
+	Insert tab	إدراج تبويب
+	Insert this block	إدراج هذه الكتلة
+	Insert Table Formula	إدراج صيغة في الجدول
+	Insertion	نقطة الإدراج
+	Insertion X	إدراج X
+	Insertion Y	إدراج Y
+	Insertion Z	إدراج Z
+	Inspect Constraints	فحص القيود
+	Inspect Drawing	فحص الرسم
+	Inspection	فحص
+	Intersect	تقاطع
+	Intersection	تقاطع
+	Isolate	عزل
+	Isolate Layer	عزل الطبقة
+	Isolate Objects	عزل الكائنات
+	Isometric Drafting	رسم متساوي القياس
+	Jogged	منكسر
+	Jogged Linear	قياس خطي منكسر
+	Join the ArtCraft Discord…	انضم إلى Discord الخاص بـ ArtCraft…
+	Join us on Discord	انضم إلينا على Discord
+	Isometric Plane	المستوى متساوي القياس
+	Isometric snap	التقاط متساوي القياس
+	Last	الأخير
+	Last commit	آخر التزام
+	Layer	طبقة
+	Layer Delete	حذف الطبقة مع الكائنات
+	Layer Match	مطابقة الطبقة
+	Layer Merge	دمج الطبقات
+	Layer Off	إيقاف الطبقة
+	Layer Properties	خصائص الطبقة
+	Layer Properties Manager — current viewport	مدير خصائص الطبقات — منفذ العرض الحالي
+	Layer State	حالة الطبقات
+	Layer States Manager...	مدير حالات الطبقات...
+	Layer Tools	أدوات الطبقات
+	Layer contains objects (double-click to make current)	الطبقة تحتوي على كائنات (انقر مرتين لجعلها الحالية)
+	Layer is empty (double-click to make current)	الطبقة فارغة (انقر مرتين لجعلها الحالية)
+	Hide Palette	إخفاء اللوحة
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	الطبقات المعروضة: {shown} من {total}.   الطبقة الحالية: {layer}
+	Layout	التخطيط
+	Layout list	قائمة التخطيطات
+	Leader	خط إرشادي
+	Leaders Only	الخطوط الإرشادية فقط
+	Left	يسار
+	Length	الطول
+	Length X	الطول X
+	Length Y	الطول Y
+	Lengthen	إطالة
+	Light	فاتح
+	Line delta	فرق عدد الأسطر
+	Lines +/−	الأسطر +/−
+	Lines added	أُضيفت أسطر
+	Lines deleted	حُذفت أسطر
+	Lines of Command History	أسطر سجل الأوامر
+	Linetype	نوع الخط
+	Linetype Scale	مقياس نوع الخط
+	Linetype scale	مقياس نوع الخط
+	Ltscale	مقياس نوع الخط
+	Linetype...	نوع الخط...
+	Lineweight	سمك الخط
+	Lineweight...	سمك الخط...
+	List	قائمة
+	List Blocks	قائمة الكتل
+	List Dimension Styles	قائمة أنماط القياس
+	List Groups	قائمة المجموعات
+	List Layer States	قائمة حالات الطبقات
+	List Layouts	قائمة التخطيطات
+	List System Variables	قائمة متغيرات النظام
+	List Text Styles	قائمة أنماط النص
+	Load all	تحميل الكل
+	Load...	تحميل...
+	Loaded linetypes	أنواع الخطوط المحمّلة
+	Lock	قفل
+	Lock Layer	قفل الطبقة
+	Lock viewport	قفل منفذ العرض
+	Lock/Unlock	قفل/فتح
+	Loft	تحويل بالمقاطع
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT أو Apache-2.0. غير مرتبط بشركة Autodesk, Inc.
+	MODEL	النموذج
+	MText	نص متعدد الأسطر
+	Magenta	أرجواني
+	Major line every	الخط الرئيسي كل
+	Make Current	جعله الحالي
+	Make Object's Layer Current	جعل طبقة الكائن الحالية
+	Match Layer	مطابقة الطبقة
+	Match Properties	مطابقة الخصائص
+	Measure	قياس المسافة
+	Measure Distance	قياس المسافة
+	Measure Geometry	قياس الهندسة
+	Merge Cells	دمج الخلايا
+	Merged PRs	طلبات الدمج المدموجة
+	Mid Between 2 Points	منتصف بين نقطتين
+	Midpoint	منتصف
+	Model	النموذج
+	Model Space (in viewport)	فضاء النموذج (داخل منفذ العرض)
+	Modeling	النمذجة
+	Models	النماذج
+	Multileader	خط إرشادي متعدد
+	Multileader Style...	نمط الخطوط الإرشادية المتعددة...
+	Multileader style	نمط الخطوط الإرشادية المتعددة
+	Multiline	خط متعدد
+	Multiline Text...	نص متعدد الأسطر...
+	Multiple	متعدد
+	Multiple Point	نقاط متعددة
+	My	خاصتي
+	My properties: not available yet	خصائصي: غير متوفرة بعد
+	N	شم
+	Name	الاسم
+	Name (A–Z)	الاسم (A–Z)
+	Named Views...	المشاهد المسماة...
+	Nearest	الأقرب
+	New (metric)	جديد (متري)
+	New Drawing	رسم جديد
+	New Drawing (⌘N)	رسم جديد (⌘N)
+	New Drawing...	رسم جديد...
+	New Layer	طبقة جديدة
+	New Layout	تخطيط جديد
+	New VP Freeze	تجميد منفذ عرض جديد
+	New Viewports...	منافذ عرض جديدة...
+	New from Template...	جديد من قالب...
+	New layout	تخطيط جديد
+	New state name	اسم الحالة الجديدة
+	Next Change	التغيير التالي
+	No blocks defined in this drawing.	لا توجد كتل معرّفة في هذا الرسم.
+	No contributor data was built into this copy.	لم تُضمَّن بيانات المساهمين في هذه النسخة.
+	No model credits were built into this copy.	لم تُضمَّن بيانات النماذج في هذه النسخة.
+	No saved layer states	لا توجد حالات طبقات محفوظة
+	No selection	لا يوجد تحديد
+	Node	عقدة
+	None	لا شيء
+	Not available	غير متوفر
+	Not available yet	غير متوفر بعد
+	Numbered list	قائمة مرقمة
+	Object	كائن
+	Object Snap	التقاط الكائنات
+	Object Snap (F3)	التقاط الكائنات (F3)
+	Object Snap On (F3)	تشغيل التقاط الكائنات (F3)
+	Object Snap Tracking	تتبع التقاط الكائنات
+	Object Snap Tracking (F11)	تتبع التقاط الكائنات (F11)
+	Object Snap Tracking Settings	إعدادات تتبع التقاط الكائنات
+	Object type:	نوع الكائن:
+	Oblique	مائل
+	Off	إيقاف
+	On	تشغيل
+	On/Off	تشغيل/إيقاف
+	One of the Crafting Apps by the ArtCraft team and community.	إحدى تطبيقات Crafting Apps من فريق ArtCraft ومجتمعه.
+	Only in this drawing: {n}	في هذا الرسم فقط: {n}
+	Only in {name}: {n}	في {name} فقط: {n}
+	Open (⌘O)	فتح (⌘O)
+	Open Sample Drawing	فتح رسم نموذجي
+	Open sample drawing	فتح رسم نموذجي
+	Open Xref	فتح مرجع خارجي
+	Operator:	المشغّل:
+	Orbit	مدار
+	Ordinate	إحداثي
+	Ortho (F8)	التعامد (F8)
+	Ortho Mode	وضع التعامد
+	Ortho Mode (F8)	وضع التعامد (F8)
+	Osnap Settings...	إعدادات التقاط الكائنات...
+	Out	تصغير
+	Over-constrained	مقيّد بشكل زائد
+	Override	تجاوز
+	PAPER	الورقة
+	Percent	نسبة مئوية
+	Polar (distance < angle)	قطبي (المسافة < الزاوية)
+	PRs	طلبات الدمج
+	Page Setup Manager	مدير إعداد الصفحة
+	Page Setup Manager...	مدير إعداد الصفحة...
+	Pan Down	تحريك لأسفل
+	Pan Left	تحريك لليسار
+	Pan Right	تحريك لليمين
+	Pan Up	تحريك لأعلى
+	Paper Space	فضاء الورقة
+	Parallel	توازي
+	Parametric	وسيطي
+	Paste	لصق
+	Paste as Block	لصق كتلة
+	Paste to Command Line	لصق في سطر الأوامر
+	Paste to Original Coordinates	لصق في الإحداثيات الأصلية
+	Path Array	مصفوفة على المسار
+	Pattern	نمط
+	Perpendicular	تعامد
+	Plot	طباعة
+	Plot (click: do not plot)	طباعة (انقر لإلغاء الطباعة)
+	Plot Preview	معاينة الطباعة
+	Plot Window	نافذة الطباعة
+	Plot style	نمط الطباعة
+	Plot style attached to	نمط الطباعة مرتبط بـ
+	Plot style table	جدول أنماط الطباعة
+	Plot Style...	نمط الطباعة...
+	Plot Style Manager	مدير أنماط الطباعة
+	Plot Style Manager...	مدير أنماط الطباعة...
+	Plot Styles...	أنماط الطباعة...
+	Plotter Manager	مدير الطابعات
+	Plotter Manager...	مدير الطابعات...
+	New CTB	CTB جديد
+	New STB	STB جديد
+	New style	نمط جديد
+	Reset Panel Layout	إعادة ضبط تخطيط اللوحات
+	Send Hatches to Back	التظليل إلى الخلف
+	Send Under Objects	إرسال تحت الكائنات
+	Text Objects Only	الكائنات النصية فقط
+	Use for this layout	استخدم لهذا التخطيط
+	Display plot styles	عرض أنماط الطباعة
+	No plot style tables.	لا توجد جداول أنماط طباعة.
+	A built-in table: editing it keeps an edited copy in the drawing.	جدول مدمج: تحريره يحفظ نسخة معدّلة منه في الرسم.
+	Keep an editable copy of this table in the drawing	الاحتفاظ بنسخة قابلة للتحرير من هذا الجدول في الرسم
+	Layout {name}: {table}	التخطيط {name}: {table}
+	Grayscale	تدرج الرمادي
+	Screening	التظليل النقطي
+	Use object linetype	استخدام نوع خط الكائن
+	Use object lineweight	استخدام سمك خط الكائن
+	Remove	إزالة
+	Add	إضافة
+	Open a drawing first.	افتح رسمًا أولًا.
+	Plot table type	نوع جدول الطباعة
+	Color-dependent	حسب اللون
+	Named	مُسمّى
+	Plus/minus	زائد/ناقص
+	Point Filters	مرشّحات النقاط
+	Point Style...	نمط النقطة...
+	Polar Array	مصفوفة قطبية
+	Polar Tracking	التتبع القطبي
+	Polar Tracking (F10)	التتبع القطبي (F10)
+	Polar Tracking On (F10)	تشغيل التتبع القطبي (F10)
+	Polar angle measurement	قياس الزاوية القطبية
+	Polar distance	المسافة القطبية
+	Polar: {distance} < {angle}°	قطبي: {distance} < {angle}°
+	PolarSnap	الالتقاط القطبي
+	Polygonal	متعدد الأضلاع
+	Polygonal Viewport	منفذ عرض متعدد الأضلاع
+	Polyline Edit	تحرير الخط المتعدد
+	Position X	الموضع X
+	Position Y	الموضع Y
+	Position Z	الموضع Z
+	Previous	السابق
+	Previous Change	التغيير السابق
+	Previous Layer	الطبقة السابقة
+	Primitives	العناصر الأولية
+	Properties	الخصائص
+	Properties:	الخصائص:
+	Proxy	كائن وكيل
+	Pyramid	هرم
+	Quadrant	ربع دائرة
+	Query Entities	استعلام الكيانات
+	Quick	سريع
+	Quick Dimension	قياس سريع
+	Quick Properties	خصائص سريعة
+	Quick Select	تحديد سريع
+	Quick Select Properties	خصائص التحديد السريع
+	QuickCalc	الحاسبة
+	QuickCalc Pick	اختيار للحاسبة
+	Radius	نصف القطر
+	Raster Image	صورة نقطية
+	Ray	شعاع
+	Read-only	للقراءة فقط
+	Real name	الاسم الحقيقي
+	Realtime	فوري
+	Reassociate Dimensions	إعادة ربط القياسات
+	Recent	الأخيرة
+	Recent Commands	الأوامر الأخيرة
+	Recent Input	الإدخال الأخير
+	Recover...	استعادة...
+	Recalculate Table Formulas	إعادة حساب صيغ الجدول
+	Rectangular	مستطيلي
+	Rectangular snap	التقاط مستطيلي
+	Rectangular Array	مصفوفة مستطيلة
+	Red	أحمر
+	Redo (⇧⌘Z)	إعادة (⇧⌘Z)
+	Redraw	إعادة الرسم
+	Regen	إعادة التوليد
+	Regen All	إعادة توليد الكل
+	Region	منطقة
+	Region/Mass Properties	خصائص المنطقة/الكتلة
+	Reinitialize	إعادة التهيئة
+	Relative	نسبي
+	Relative to last segment	نسبةً إلى آخر مقطع
+	Remove Leader	إزالة الخط الإرشادي
+	Remove the viewport override	إزالة تجاوز منفذ العرض
+	Rename Dimension Style	إعادة تسمية نمط القياس
+	Rename Layer	إعادة تسمية الطبقة
+	Rename Layer State	إعادة تسمية حالة الطبقات
+	Rename Layout	إعادة تسمية التخطيط
+	Rename Text Style	إعادة تسمية نمط النص
+	Rename...	إعادة تسمية...
+	Repeat {command}	تكرار {command}
+	Requires a point (x,y, @dx,dy or @d<a).	يتطلب نقطة (x,y أو @dx,dy أو @d<a).
+	Restore	استعادة
+	Restore Layer State	استعادة حالة الطبقات
+	Reverse	عكس
+	Reverse the order	عكس الترتيب
+	Revision Cloud	سحابة مراجعة
+	Revolve	تدوير حول محور
+	Right	يمين
+	Rotation	زاوية الدوران
+	S	ج
+	Save (⌘S)	حفظ (⌘S)
+	Save As	حفظ باسم
+	Save Layer State	حفظ حالة الطبقات
+	Save State	حفظ الحالة
+	Search for layer	ابحث عن طبقة
+	Search for parameter	ابحث عن معامل
+	Second and next points:	النقطة الثانية وما بعدها:
+	Select	تحديد
+	Select 2D polyline	حدد البوليلاين ثنائي الأبعاد
+	Select All	تحديد الكل
+	Select Objects	تحديد الكائنات
+	Select Similar	تحديد المتشابهات
+	Select a 2D polyline.	حدد بوليلاين ثنائي الأبعاد.
+	Select a block reference.	حدد مرجع كتلة.
+	Select a circle or arc.	حدد دائرة أو قوسًا.
+	Select a closed polyline	حدد خطًا متعددًا مغلقًا
+	Select a closed polyline, circle, ellipse or closed spline.	حدد خطًا متعددًا مغلقًا أو دائرة أو قطعًا ناقصًا أو منحنى مغلقًا.
+	Select a closed polyline.	حدد خطًا متعددًا مغلقًا.
+	Select a curve as the path.	حدد منحنى كمسار.
+	Select a dimension constraint type	حدد نوع قيد القياس
+	Select a line object	حدد كائن خط
+	Select a line object.	حدد كائن خط.
+	Select a line or an arc.	حدد خطًا أو قوسًا.
+	Select a line or polyline segment	حدد خطًا أو مقطعًا من خط متعدد
+	Select a line, arc or open polyline.	حدد خطًا أو قوسًا أو خطًا متعددًا مفتوحًا.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	حدد خطًا أو قوسًا أو دائرة أو خطًا متعددًا أو قطعًا ناقصًا أو منحنى كمسار.
+	Select a line, circle, arc or polyline segment.	حدد خطًا أو دائرة أو قوسًا أو مقطعًا من خط متعدد.
+	Select a line.	حدد خطًا.
+	Select a polyline.	حدد خطًا متعددًا.
+	Select a text, mtext, attribute definition or dimension.	حدد نصًا أو نصًا متعدد الأسطر أو تعريف سمة أو قياسًا.
+	Select an annotation object	حدد كائن تعليق توضيحي
+	Select an arc or circle	حدد قوسًا أو دائرة
+	Select an arc.	حدد قوسًا.
+	Select an object	حدد كائنًا
+	Select an object to change or	حدد كائنًا للتغيير أو
+	Select an object to measure or	حدد كائنًا للقياس أو
+	Select an object.	حدد كائنًا.
+	Select an open curve.	حدد منحنى مفتوحًا.
+	Select an open line, arc, polyline, ellipse arc or spline.	حدد خطًا أو قوسًا أو خطًا متعددًا أو قوسًا إهليلجيًا أو منحنى مفتوحًا.
+	Select arc or circle	حدد قوسًا أو دائرة
+	Select arc or polyline arc segment	حدد قوسًا أو مقطعًا قوسيًا من خط متعدد
+	Select arc style	حدد نمط القوس
+	Select arc, circle, line	حدد قوسًا أو دائرة أو خطًا
+	Select at least two objects to join.	حدد كائنين على الأقل للدمج.
+	Select circle or arc to add center mark	حدد دائرة أو قوسًا لإضافة علامة المركز.
+	Select closed objects (regions, closed polylines, circles).	حدد كائنات مغلقة (مناطق، خطوط متعددة مغلقة، دوائر).
+	Select first line	حدد الخط الأول
+	Select first line or arc	حدد الخط الأول أو القوس
+	Select first object	حدد الكائن الأول
+	Select first object or	حدد الكائن الأول أو
+	Select first point	حدد النقطة الأولى
+	Select nested objects to copy or	حدد الكائنات المتداخلة للنسخ أو
+	Select object	حدد كائنًا
+	Select object to dimension	حدد كائنًا لإضافة قياس
+	Select object to divide	حدد كائنًا للتقسيم
+	Select object to extend or shift-select to trim	حدد كائنًا للتمديد، أو حدد بالـ Shift للقص
+	Select object to measure	حدد كائنًا للقياس
+	Select object to offset	حدد كائنًا للإزاحة
+	Select object to trim or shift-select to extend	حدد كائنًا للقص، أو حدد بالـ Shift للتمديد
+	Select objects	حدد الكائنات
+	Select objects (crossing window first corner)	حدد الكائنات (الركن الأول للإطار المتقاطع)
+	Select objects to array.	حدد كائنات لعمل المصفوفة.
+	Select objects to stretch by crossing-window or crossing-polygon...	حدد الكائنات للتمديد بإطار متقاطع أو مضلع متقاطع...
+	Select objects:	حدد الكائنات:
+	Select one polyline (Multiple is available through the JSON form).	حدد خطًا متعددًا واحدًا (Multiple متاح عبر نموذج JSON).
+	Select path curve	حدد منحنى المسار
+	Select point or object	حدد نقطة أو كائنًا
+	Select polyline or	حدد خطًا متعددًا أو
+	Select second line	حدد الخط الثاني
+	Select second line or shift-select to apply corner	حدد الخط الثاني أو اختر بالـ Shift لتطبيق الزاوية
+	Select second object	حدد الكائن الثاني
+	Select second object or shift-select to apply corner	حدد الكائن الثاني أو اختر بالـ Shift لتطبيق الزاوية
+	Select second point	حدد النقطة الثانية
+	Select spline	حدد منحنى
+	Select symmetry line	حدد خط التماثل
+	Select two points	حدد نقطتين
+	Selection Cycling	التنقل بين التحديدات
+	Send to Back	إلى الخلف
+	Set Current	جعله الحالي
+	Set Current Dimension Style	جعل نمط القياس الحالي
+	Set Current Text Style	جعل نمط النص الحالي
+	Set Current Viewport	جعل منفذ العرض الحالي
+	Set Layer Properties	تعيين خصائص الطبقة
+	Set Properties	تعيين الخصائص
+	Set Table Cell	تعيين خلية الجدول
+	Set Table Cell Style	تعيين نمط خلية الجدول
+	Set Variable	تعيين متغير
+	Set View	تعيين العرض
+	Share	مشاركة
+	Show	إظهار
+	Show All	إظهار الكل
+	Show All Constraint Bars	إظهار كل أشرطة القيود
+	Show All Dynamic Dimensions	إظهار كل القياسات الديناميكية
+	Show and hide the tools of this category	إظهار وإخفاء أدوات هذه الفئة
+	Show in Tool Sets	الإظهار في مجموعات الأدوات
+	Show command prompting near the crosshairs	إظهار مطالبات الأوامر بالقرب من المؤشر
+	Show Layer List	إظهار قائمة الطبقات
+	Show/Hide Lineweight	إظهار/إخفاء سمك الخط
+	Show/Hide Transparency	إظهار/إخفاء الشفافية
+	Single Point	نقطة واحدة
+	Single...	واحد...
+	Smooth	تنعيم
+	Snap	التقاط
+	Snap Mode	وضع الالتقاط
+	Snap Mode (F9)	وضع الالتقاط (F9)
+	Snap On (F9)	تشغيل الالتقاط (F9)
+	Snap Overrides	تجاوزات الالتقاط
+	Snap X spacing	تباعد الالتقاط X
+	Snap and Grid	الالتقاط والشبكة
+	Snap type	نوع الالتقاط
+	Solid	مجسم
+	Sort	فرز
+	Specify a point	حدد نقطة
+	Specify a scale for the hatch pattern	حدد مقياس نمط التظليل
+	Specify a second extension line origin	حدد أصل خط التمديد الثاني
+	Specify an angle for the hatch pattern	حدد زاوية نمط التظليل
+	Specify angle end point	حدد نقطة نهاية الزاوية
+	Specify angle of dimension line	حدد زاوية خط القياس
+	Specify angle of dimension text	حدد زاوية نص القياس
+	Specify angle start point	حدد نقطة بداية الزاوية
+	Specify angle vertex	حدد رأس الزاوية
+	Specify angle vertex point	حدد نقطة رأس الزاوية
+	Specify arc length dimension location	حدد موضع قياس طول القوس
+	Specify axis endpoint of ellipse	حدد نقطة نهاية محور القطع الناقص
+	Specify base diameter	حدد قطر القاعدة
+	Specify base point	حدد نقطة الأساس
+	Specify base point or	حدد نقطة الأساس أو
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	حدد نقطة الأساس أو الإزاحة (اسحب بزر الفأرة الأوسط للتحريك الفوري)
+	Specify base radius or	حدد نصف قطر القاعدة أو
+	Specify center of donut	حدد مركز الحلقة
+	Specify center of ellipse	حدد مركز القطع الناقص
+	Specify center of polygon	حدد مركز المضلع
+	Specify center point for circle	حدد نقطة مركز الدائرة
+	Specify center point of arc	حدد نقطة مركز القوس
+	Specify center point of array	حدد نقطة مركز المصفوفة
+	Specify center point of base	حدد نقطة مركز الأساس
+	Specify corner of viewport	حدد زاوية منفذ العرض
+	Specify corner of window, enter a scale factor (nX or nXP)	حدد زاوية الإطار، أدخل معامل التحجيم (nX أو nXP)
+	Specify diameter of circle	حدد قطر الدائرة
+	Specify dimension arc line location	حدد موضع قوس خط القياس
+	Specify dimension line location	حدد موضع خط القياس
+	Specify distance between turns	حدد المسافة بين اللفات
+	Specify distance to other axis	حدد المسافة إلى المحور الآخر
+	Specify end angle	حدد الزاوية النهائية
+	Specify end point of arc	حدد نقطة نهاية القوس
+	Specify end point of arc (hold Ctrl to switch direction)	حدد نقطة نهاية القوس (اضغط Ctrl لتغيير الاتجاه)
+	Specify ending width	حدد العرض النهائي
+	Specify ending width for next segment	حدد العرض النهائي للمقطع التالي
+	Specify endpoint of arc	حدد نقطة نهاية القوس
+	Specify endpoint of axis	حدد نقطة نهاية المحور
+	Specify endpoint of line	حدد نقطة نهاية الخط
+	Specify feature location	حدد موضع الميزة
+	Specify fillet radius	حدد نصف قطر التقويس
+	Specify fillet radius for rectangles	حدد نصف قطر التقويس للمستطيلات
+	Specify first angle endpoint	حدد نقطة الزاوية النهائية الأولى
+	Specify first chamfer distance	حدد مسافة الشطب الأولى
+	Specify first chamfer distance for rectangles	حدد مسافة الشطب الأولى للمستطيلات
+	Specify first constraint point	حدد نقطة القيد الأولى
+	Specify first corner	حدد الركن الأول
+	Specify first corner point	حدد نقطة الركن الأولى
+	Specify first destination point	حدد نقطة الوجهة الأولى
+	Specify first end point of circle's diameter	حدد نقطة النهاية الأولى لقطر الدائرة
+	Specify first endpoint of edge	حدد نقطة النهاية الأولى للحافة
+	Specify first extension line origin	حدد أصل خط التمديد الأول
+	Specify first point	حدد النقطة الأولى
+	Specify first point of mirror line	حدد النقطة الأولى لمحور الانعكاس
+	Specify first point on circle	حدد النقطة الأولى على الدائرة
+	Specify first point on circle: _tan to	حدد النقطة الأولى على الدائرة: _tan إلى
+	Specify first source point	حدد نقطة المصدر الأولى
+	Specify height	حدد الارتفاع
+	Specify helix height or	حدد ارتفاع الحلزون أو
+	Specify included angle	حدد الزاوية المحصورة
+	Specify insertion base point	حدد نقطة أساس الإدراج
+	Specify insertion point	حدد نقطة الإدراج
+	A drawing opened from a file keeps that file's format.	الرسم المفتوح من ملف يحتفظ بتنسيق ذلك الملف.
+	An array that would create more objects than this is refused.	المصفوفة التي تنشئ كائنات أكثر من هذا العدد مرفوضة.
+	muhandes keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	يحفظ مهندس هذه التفضيلات وأوضاع التقاط الكائنات ومفاتيح الرسم لحساب المستخدم، ويستعيدها عند التشغيل.
+	Changes apply at once and are kept for next time.	تُطبَّق التغييرات فورًا وتُحفظ للمرة القادمة.
+	Command line history	سجل سطر الأوامر
+	Copy as JSON	نسخ كـ JSON
+	Crosshair size	حجم الصليب
+	Display	العرض
+	Grip size	حجم المقبض
+	Hold Shift to add to the selection	اضغط Shift للإضافة إلى التحديد
+	Interface language	لغة الواجهة
+	Interface theme	سمة الواجهة
+	Keep the system cursor visible over the drawing area	إبقاء مؤشر النظام مرئيًا فوق منطقة الرسم
+	Largest array	أكبر مصفوفة
+	Layout paper	ورق التخطيط
+	Model background	خلفية فضاء النموذج
+	Object snap aperture	فتحة التقاط الكائنات
+	Object snap marker size	حجم علامة التقاط الكائنات
+	Open and Save	الفتح والحفظ
+	Options	الخيارات
+	Options...	الخيارات...
+	Pickbox size	حجم مربع الاختيار
+	Profiles	الملفات الشخصية
+	Reset keeps the interface language.	لا تغيّر إعادة الضبط لغة الواجهة.
+	Reset to Defaults	إعادة الضبط إلى الافتراضي
+	Save new drawings as	حفظ الرسومات الجديدة باسم
+	Screen magnifiers, screen readers and recorders follow the system cursor.	تتبع المكبّرات والقراءات الشاشية وأدوات التسجيل مؤشر النظام.
+	Select objects first, then choose a command	حدّد الكائنات أولًا ثم اختر الأمر
+	Selection	التحديد
+	Settings...	الإعدادات...
+	Show Quick Properties for selected objects	إظهار الخصائص السريعة للكائنات المحددة
+	Snap, grid, polar tracking and Dynamic Input:	الالتقاط والشبكة والتتبع القطبي والإدخال الديناميكي:
+	The aperture is how near the cursor must come to a point for an object snap to find it.	الفتحة هي المسافة التي يجب أن يقترب فيها المؤشر من نقطة ليجدها التقاط الكائنات.
+	User Preferences	تفضيلات المستخدم
+	objects	كائنات
+	Specify inside diameter of donut	حدد القطر الداخلي للحلقة
+	Specify leader arrowhead location	حدد موضع رأس سهم الخط الإرشادي
+	Specify leader endpoint	حدد نقطة نهاية الخط الإرشادي
+	Specify leader landing location	حدد موضع هبوط الخط الإرشادي
+	Specify length for rectangles	حدد طول المستطيلات
+	Specify length of chord	حدد طول الوتر
+	Specify length of segment	حدد طول المقطع
+	Specify line width for rectangles	حدد عرض خطوط المستطيلات
+	Specify location for new vertex	حدد موضع الرأس الجديد
+	Specify minimum length of arc	حدد الحد الأدنى لطول القوس
+	Specify new end point	حدد نقطة النهاية الجديدة
+	Specify new location for marked vertex	حدد الموضع الجديد للرأس المحدد
+	Specify new width for all segments	حدد العرض الجديد لكل المقاطع
+	Specify next point	حدد النقطة التالية
+	Specify offset distance	حدد مسافة الإزاحة
+	Specify offset distance or	حدد مسافة الإزاحة أو
+	Specify opposite corner	حدد الزاوية المقابلة
+	Specify other corner point	حدد نقطة الزاوية المقابلة
+	Specify other endpoint of axis	حدد نقطة النهاية الأخرى للمحور
+	Specify outside diameter of donut	حدد القطر الخارجي للحلقة
+	Specify point	حدد نقطة
+	Specify point on object for first tangent of circle	حدد نقطة على الكائن للمماس الأول للدائرة
+	Specify point on object for second tangent of circle	حدد نقطة على الكائن للمماس الثاني للدائرة
+	Specify point on side to offset	حدد نقطة على الجانب المراد إزاحته
+	Specify radius of arc	حدد نصف قطر القوس
+	Specify radius of circle	حدد نصف قطر الدائرة
+	Specify rotation angle	حدد زاوية الدوران
+	Specify rotation angle of text	حدد زاوية دوران النص
+	Specify rotation angle or	حدد زاوية الدوران أو
+	Specify scale factor	حدد معامل التحجيم
+	Specify second angle endpoint	حدد نقطة نهاية الزاوية الثانية
+	Specify second break point	حدد نقطة الكسر الثانية
+	Specify second chamfer distance for rectangles	حدد مسافة الشطب الثانية للمستطيلات
+	Specify second constraint point	حدد نقطة القيد الثانية
+	Specify second destination point	حدد نقطة الوجهة الثانية
+	Specify second end point of circle's diameter	حدد نقطة النهاية الثانية لقطر الدائرة
+	Specify second endpoint of edge	حدد نقطة النهاية الثانية للحافة
+	Specify second extension line origin	حدد أصل خط التمديد الثاني
+	Specify second point	حدد النقطة الثانية
+	Specify second point of arc	حدد النقطة الثانية للقوس
+	Specify second point of mirror line	حدد النقطة الثانية لمحور الانعكاس
+	Specify second point on circle	حدد النقطة الثانية على الدائرة
+	Specify second point on circle: _tan to	حدد النقطة الثانية على الدائرة: _tan إلى
+	Specify second point or <use first point as displacement>	حدد النقطة الثانية أو <استخدم النقطة الأولى كإزاحة>
+	Specify second source point	حدد نقطة المصدر الثانية
+	Specify side to offset	حدد الجانب المراد إزاحته
+	Specify start angle	حدد الزاوية الابتدائية
+	Specify start point	حدد نقطة البداية
+	Specify start point of arc	حدد نقطة بداية القوس
+	Specify start point of polyline	حدد نقطة بداية الخط المتعدد
+	Specify start point of text	حدد نقطة بداية النص
+	Specify starting width	حدد العرض الابتدائي
+	Specify starting width for next segment	حدد العرض الابتدائي للمقطع التالي
+	Specify tangent direction for the start point of arc	حدد اتجاه المماس عند نقطة بداية القوس
+	Specify the elevation for rectangles	حدد الارتفاع للمستطيلات
+	Specify thickness for rectangles	حدد سماكة المستطيلات
+	Specify third point on circle	حدد النقطة الثالثة على الدائرة
+	Specify third point on circle: _tan to	حدد النقطة الثالثة على الدائرة: _tan إلى
+	Specify third source point or <continue>	حدد نقطة المصدر الثالثة أو <متابعة>
+	Specify through point	حدد نقطة يمر بها الخط
+	Specify top diameter	حدد قطر القمة
+	Specify top radius or	حدد نصف قطر القمة أو
+	Specify total angle	حدد الزاوية الكلية
+	Specify total length or	حدد الطول الكلي أو
+	Specify width for rectangles	حدد عرض المستطيلات
+	Sphere	كرة
+	Spline Edit	تحرير السبلاين
+	Stack (type 1/2 then select)	تكديس (اكتب 1/2 ثم حدد)
+	Standard	قياسي
+	Start Width	العرض الابتدائي
+	Start X	بداية X
+	Start Y	بداية Y
+	Start angle	الزاوية الابتدائية
+	Start, Center, Angle	البداية، المركز، الزاوية
+	Start, Center, End	البداية، المركز، النهاية
+	Start, Center, Length	البداية، المركز، الطول
+	Start, End, Angle	البداية، النهاية، الزاوية
+	Start, End, Direction	البداية، النهاية، الاتجاه
+	Start, End, Radius	البداية، النهاية، نصف القطر
+	Status	الحالة
+	Style: Standard	النمط: Standard
+	Subtract	طرح
+	Sweep	تمديد على مسار
+	Switch Drawing	تبديل الرسم
+	Switch Layout	تبديل التخطيط
+	Switch between model space in a viewport and paper space	التبديل بين فضاء النموذج داخل منفذ العرض وفضاء الورقة
+	Symmetric	تماثل
+	Synchronize Attributes	مزامنة السمات
+	To	إلى
+	Toggle PICKADD (off: each pick replaces the selection)	تبديل PICKADD (إيقاف: كل نقرة تستبدل التحديد)
+	Toggle PICKADD (on: picks add to the selection)	تبديل PICKADD (تشغيل: النقرات تضيف إلى التحديد)
+	TOP	أعلى
+	Table	جدول
+	Table Breaks	فواصل الجدول
+	Table Cell Style	نمط خلايا الجدول
+	Table Style...	نمط الجدول...
+	Table style	نمط الجدول
+	Table...	جدول...
+	Tan, Tan, Radius	مماس، مماس، نصف القطر
+	Tan, Tan, Tan	مماس، مماس، مماس
+	Tangent	مماسية
+	Temporary track point	نقطة تتبع مؤقتة
+	Text	نص
+	Text Editor	محرر النصوص
+	Text Height	ارتفاع النص
+	Text Style...	نمط النص...
+	Text height	ارتفاع النص
+	Text override	تجاوز النص
+	Text style	نمط النص
+	Thaw All Layers	إذابة كل الطبقات
+	Thaw Layer	إذابة الطبقة
+	There is nothing here yet.	لا يوجد شيء هنا بعد.
+	Thickness	السماكة
+	Time	الوقت
+	To get started, create or open a drawing.	للبدء، أنشئ رسمًا أو افتحه.
+	Torus	حلقة (توروس)
+	Trace	تتبع
+	Track orthogonally only	التتبع المتعامد فقط
+	Track using all polar angle settings	التتبع باستخدام كل إعدادات الزوايا القطبية
+	Transparency	الشفافية
+	True Color	لون RGB
+	Turn All Layers On	تشغيل كل الطبقات
+	Turn Off Layer	إيقاف الطبقة
+	Turn On Layer	تشغيل الطبقة
+	Turn Quick Properties off (QPMODE)	إيقاف الخصائص السريعة (QPMODE)
+	Type	النوع
+	Type a command	اكتب أمرًا
+	Type text; Enter starts a new paragraph	اكتب نصًا؛ يبدأ Enter فقرة جديدة
+	UCS Icon	أيقونة UCS
+	Undo (⌘Z)	تراجع (⌘Z)
+	Ungroup	فك التجميع
+	Union	اتحاد
+	Unisolate Layer	إلغاء عزل الطبقة
+	Units Conversion	تحويل الوحدات
+	Units...	الوحدات...
+	Unlock Layer	إلغاء قفل الطبقة
+	Unlock viewport	إلغاء قفل منفذ العرض
+	Unmerge Cells	إلغاء دمج الخلايا
+	Unsaved Layer State	حالة طبقات غير محفوظة
+	Up	لأعلى
+	Update Data Links	تحديث روابط البيانات
+	Update	تحديث
+	Use System Setting	حسب إعداد النظام
+	User	مستخدم
+	User Parameters	معاملات المستخدم
+	Username	اسم المستخدم
+	Volume	الحجم
+	VP Color	لون منفذ العرض
+	VP Freeze	تجميد منفذ العرض
+	Value	القيمة
+	Value:	القيمة:
+	Variables	المتغيرات
+	Version	الإصدار
+	Version 2000	الإصدار 2000
+	Version 2004	الإصدار 2004
+	Version 2007	الإصدار 2007
+	Version 2010	الإصدار 2010
+	Version 2013	الإصدار 2013
+	Version 2018	الإصدار 2018
+	Version {version}	الإصدار {version}
+	Vertical	عمودي
+	VerticalDistance	المسافة العمودية
+	ViewCube	مكعب العرض
+	Viewport	منفذ عرض
+	Viewport Layer Freeze	تجميد طبقة منفذ العرض
+	Viewport Properties	خصائص منفذ العرض
+	Viewport is locked	منفذ العرض مقفل
+	Viewport scale	مقياس منفذ العرض
+	Viewport {id}	منفذ العرض {id}
+	Viewports	منافذ العرض
+	W	غ
+	WCS ⌄	ساحة الإحداثيات العالمية ⌄
+	White	أبيض
+	Width factor	معامل العرض
+	Wipeout	الإخفاء بالقناع
+	Workspace Switching	تبديل مساحة العمل
+	Write Block	كتابة الكتلة إلى ملف
+	Xline	خط إنشائي
+	Yellow	أصفر
+	Zoom All	إظهار الكل
+	Zoom Dynamic	التكبير الديناميكي
+	Zoom Extents	إظهار مدى الكائنات
+	Zoom In	تكبير
+	Zoom Object	إظهار الكائن
+	Zoom Out	تصغير
+	Zoom Previous	التكبير السابق
+	Zoom Realtime	تكبير فوري
+	Zoom Window	تكبير بإطار
+	error	خطأ
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (القيد {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	قيد {kind} {name} = {expression}  (انقر مرتين للتحرير)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  معامل مستخدم جديد
+	ΔLOC	Δأسطر
+	−Bin	−ثنائي
+	−LOC	−أسطر
+	⌘↩ to finish	⌘↩ للإنهاء
+@plural	{n} commit	{n} التزام|{n} التزامات
+@plural	{n} contributor	{n} مساهم|{n} مساهمين
+	Drawing as bytes	الرسم كبايتات
+	Services	الخدمات
+	Hide muhandes	إخفاء مهندس
+	Hide Others	إخفاء الآخرين
+	Accessibility	إمكانية الوصول
+	Show System Cursor	إظهار مؤشر النظام
+	Import...	استيراد...
+	Export...	تصدير...
+	Batch Publish...	النشر الدفعي...
+	Scale List...	قائمة المقاييس...
+	Annotative Object Scale	مقياس الكائنات التوضيحية
+	Add Current Scale	إضافة المقياس الحالي
+	Delete Current Scale	حذف المقياس الحالي
+	Add/Delete Scales...	إضافة/حذف المقاييس...
+	Synchronize Multiple-scale Positions	مزامنة مواضع المقاييس المتعددة
+	Annotative Update	تحديث التعليقات التوضيحية
+	Show Annotative Objects	إظهار الكائنات التوضيحية
+	Current Scale Only	المقياس الحالي فقط
+	All Scales	كل المقاييس
+	Drawing Recovery Manager...	مدير استعادة الرسومات...
+	Tolerance...	التفاوت...
+	Add Vertex	إضافة رأس
+	Remove Vertex	حذف رأس
+	Convert to Arc	تحويل إلى قوس
+	Convert to Line	تحويل إلى خط
+	Stretch Vertex	تمديد رأس
+	Edit Array	تحرير المصفوفة
+	Close Array Editing	إغلاق تحرير المصفوفة
+	Multiline...	خط متعدد...
+	Multiline Style...	نمط الخط المتعدد...
+	Solid Editing	تحرير الأجسام الصلبة
+	3D Mouse...	الفأرة ثلاثية الأبعاد...
+	3D Mouse	الفأرة ثلاثية الأبعاد
+	Calibrate 3D Mouse	معايرة الفأرة ثلاثية الأبعاد
+	3D Mouse Navigation	التنقل بالفأرة ثلاثية الأبعاد
+	3D mouse input is unavailable on this platform	إدخال الفأرة ثلاثية الأبعاد غير متاح على هذه المنصة
+	No supported 3D mouse found	لم يُعثر على فأرة ثلاثية الأبعاد مدعومة
+	Release the 3D mouse to calibrate its resting position	حرّر الفأرة ثلاثية الأبعاد لمعايرة وضع السكون
+	3D mouse connected	تم توصيل الفأرة ثلاثية الأبعاد
+	3D mouse busy, possibly 3DxWare or missing device permissions	الفأرة ثلاثية الأبعاد مشغولة، ربما بسبب 3DxWare أو نقص صلاحيات الجهاز
+	3D mouse disconnected	تم فصل الفأرة ثلاثية الأبعاد
+	3D mouse input could not be started	تعذّر بدء إدخال الفأرة ثلاثية الأبعاد
+	Enable 3D mouse navigation	تفعيل التنقل بالفأرة ثلاثية الأبعاد
+	Pan sensitivity	حساسية التحريك
+	Zoom sensitivity	حساسية التكبير
+	Reverse zoom direction	عكس اتجاه التكبير
+	Calibrate	معايرة
+	Move sideways to pan; push/pull or twist to zoom.	حرّك جانبًا للتحريك؛ ادفع/اسحب أو أدر للتكبير.
+	Left device button: zoom extents. Right device button: calibrate.	زر الجهاز الأيسر: تكبير لحدود الرسم. زر الجهاز الأيمن: معايرة.
+	More toolbar commands	أوامر أخرى في شريط الأدوات
+	Default save version	إصدار الحفظ الافتراضي
+	Automatic save every	الحفظ التلقائي كل
+	min	دقيقة
+	Automatic save file location	مجلد ملفات الحفظ التلقائي
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	الرسومات التي ليس لها ملف بعد تُحفظ بالإصدار الافتراضي. 0 دقيقة يوقف الحفظ التلقائي.
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	النقر الأيمن الحساس للوقت: النقرة السريعة تعادل Enter، والضغط المطوّل يفتح القائمة
+	Turned off, a right-click while a command runs always opens the shortcut menu.	عند الإيقاف، النقر الأيمن أثناء تشغيل أمر يفتح قائمة الاختصارات دائمًا.
+	Hatch Pattern	نمط التظليل
+	Search for pattern	بحث عن نمط
+	Run Script...	تشغيل نص برمجي...
+	Part of the Creative Studio suite. Built on CADCraft by the ArtCraft team.	جزء من حزمة Creative Studio. مبني على CADCraft من فريق ArtCraft.
+	Source code: github.com/7mz410/CreativeStudio-muhandes	الشيفرة المصدرية: github.com/7mz410/CreativeStudio-muhandes

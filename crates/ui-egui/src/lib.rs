@@ -478,7 +478,12 @@ impl CadApp {
 
     /// Lay out the whole window.
     pub fn ui(&mut self, ui: &mut egui::Ui) {
-        i18n::with_language(self.language(), || self.draw(ui));
+        let language = self.language();
+        // Creative Studio: Arabic lays the interface out right to left (vendor/egui). The switch is
+        // process-wide, so unit tests, which run in parallel, leave it off (tests/rtl.rs covers it).
+        #[cfg(not(test))]
+        egui::set_rtl(i18n::bidi::RTL_CODES.contains(&language));
+        i18n::with_language(language, || self.draw(ui));
     }
 
     fn draw(&mut self, ui: &mut egui::Ui) {

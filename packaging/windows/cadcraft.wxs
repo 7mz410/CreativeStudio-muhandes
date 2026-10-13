@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  CADCraft MSI (WiX Toolset v5: `dotnet tool install -g wix`, plus the WixUI extension:
+  muhandes MSI (WiX Toolset v5: `dotnet tool install -g wix`, plus the WixUI extension:
   `wix extension add -g WixToolset.UI.wixext/5.0.2`). Built by package.ps1:
 
     wix build cadcraft.wxs -arch x64 -ext WixToolset.UI.wixext -d Version=1.2.3 -d BinDir=... -d IconPath=... -o out.msi
 
   Per-machine install into Program Files, a Start Menu shortcut, an optional desktop shortcut, and
-  CADCraft offered under "Open with" for .dxf and .dwg drawings (without taking over the user's
+  muhandes offered under "Open with" for .dxf and .dwg drawings (without taking over the user's
   default app).
 
   Desktop shortcut: the setup wizard asks (unchecked by default). Silent installs leave it out
@@ -18,7 +18,7 @@
       Name="muhandes"
       Manufacturer="Learning Machines LLC"
       Version="$(var.Version)"
-      UpgradeCode="119D7D76-0167-4A9E-8F37-09DA0235F68E"
+      UpgradeCode="EF215B5F-639A-48A1-ACDC-24F0482B6704"
       Scope="perMachine"
       Compressed="yes"
       Language="1033">
@@ -26,14 +26,14 @@
     <!-- Same-version upgrades let successive pre-releases of one X.Y.Z replace each other
          (MSI versions are numeric, so 1.2.3-rc.1 and 1.2.3-rc.2 are both 1.2.3). -->
     <MajorUpgrade AllowSameVersionUpgrades="yes"
-        DowngradeErrorMessage="A newer version of CADCraft is already installed." />
+        DowngradeErrorMessage="A newer version of muhandes is already installed." />
     <MediaTemplate EmbedCab="yes" CompressionLevel="high" />
 
     <Icon Id="CadcraftIcon.ico" SourceFile="$(var.IconPath)" />
     <Property Id="ARPPRODUCTICON" Value="CadcraftIcon.ico" />
-    <Property Id="ARPURLINFOABOUT" Value="https://getartcraft.com/apps/cadcraft" />
-    <Property Id="ARPURLUPDATEINFO" Value="https://getartcraft.com/apps/cadcraft" />
-    <Property Id="ARPHELPLINK" Value="https://discord.gg/artcraft" />
+    <Property Id="ARPURLINFOABOUT" Value="https://muhandes.studio.creative.ps" />
+    <Property Id="ARPURLUPDATEINFO" Value="https://muhandes.studio.creative.ps" />
+    <Property Id="ARPHELPLINK" Value="https://github.com/7mz410/CreativeStudio-muhandes" />
 
     <StandardDirectory Id="ProgramFiles6432Folder">
       <Directory Id="INSTALLFOLDER" Name="muhandes" />
@@ -48,7 +48,7 @@
     <!-- The previous install's choice (the shortcut component's HKCU key path, so the installing
          user's), so upgrades keep the desktop shortcut without asking again. -->
     <Property Id="PREVIOUSDESKTOPSHORTCUT">
-      <RegistrySearch Id="PreviousDesktopShortcut" Root="HKCU" Key="Software\Learning Machines LLC\CADCraft"
+      <RegistrySearch Id="PreviousDesktopShortcut" Root="HKCU" Key="Software\Creative Studio\muhandes"
           Name="DesktopShortcut" Type="raw" />
     </Property>
     <!-- Only when DESKTOPSHORTCUT wasn't given; "first" runs it once (in the UI sequence when there
@@ -65,7 +65,7 @@
 
   <Fragment>
     <ComponentGroup Id="CadcraftFiles" Directory="INSTALLFOLDER">
-      <Component Id="CadcraftApp" Guid="2AC18056-48DE-4079-AB79-4FDEF4FBB075">
+      <Component Id="CadcraftApp" Guid="E860A02D-5476-4521-9A17-882D798476AD">
         <File Id="CadcraftExe" Source="$(var.BinDir)\cadcraft.exe" KeyPath="yes">
           <Shortcut Id="StartMenuShortcut" Directory="ProgramMenuFolder" Name="muhandes"
               Description="muhandes computer-aided design" WorkingDirectory="INSTALLFOLDER" Advertise="yes"
@@ -74,9 +74,9 @@
 
         <RegistryValue Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\App Paths\cadcraft.exe" Value="[#CadcraftExe]" Type="string" />
         <RegistryValue Root="HKLM" Key="Software\Classes\Applications\cadcraft.exe\shell\open\command" Value="&quot;[#CadcraftExe]&quot; &quot;%1&quot;" Type="string" />
-        <RegistryValue Root="HKLM" Key="Software\Classes\.dxf\OpenWithProgids" Name="CADCraft.Drawing" Value="" Type="string" />
-        <RegistryValue Root="HKLM" Key="Software\Classes\.dwg\OpenWithProgids" Name="CADCraft.Drawing" Value="" Type="string" />
-        <RegistryValue Root="HKLM" Key="Software\Classes\CADCraft.Drawing\shell\open\command" Value="&quot;[#CadcraftExe]&quot; &quot;%1&quot;" Type="string" />
+        <RegistryValue Root="HKLM" Key="Software\Classes\.dxf\OpenWithProgids" Name="muhandes.Drawing" Value="" Type="string" />
+        <RegistryValue Root="HKLM" Key="Software\Classes\.dwg\OpenWithProgids" Name="muhandes.Drawing" Value="" Type="string" />
+        <RegistryValue Root="HKLM" Key="Software\Classes\muhandes.Drawing\shell\open\command" Value="&quot;[#CadcraftExe]&quot; &quot;%1&quot;" Type="string" />
       </Component>
 
       <Component Id="CadcraftCli">
@@ -86,11 +86,11 @@
       <!-- Optional desktop shortcut, removed on uninstall. A non-advertised shortcut needs a registry
            key path, and one in a profile folder (DesktopFolder, even though ALLUSERS=1 makes it the
            Public desktop) must be under HKCU (ICE38, ICE43, ICE57). -->
-      <Component Id="DesktopShortcut" Directory="DesktopFolder" Guid="76029CD7-EBDB-420F-AC34-FF0E82A99E32"
+      <Component Id="DesktopShortcut" Directory="DesktopFolder" Guid="6EE98F27-6F26-41EB-8B1A-35E5CF16A122"
           Condition="DESKTOPSHORTCUT = &quot;1&quot;">
         <Shortcut Id="DesktopShortcut" Name="muhandes" Description="muhandes computer-aided design"
             Target="[INSTALLFOLDER]cadcraft.exe" WorkingDirectory="INSTALLFOLDER" Icon="CadcraftIcon.ico" IconIndex="0" />
-        <RegistryValue Root="HKCU" Key="Software\Learning Machines LLC\CADCraft" Name="DesktopShortcut"
+        <RegistryValue Root="HKCU" Key="Software\Creative Studio\muhandes" Name="DesktopShortcut"
             Value="1" Type="string" KeyPath="yes" />
       </Component>
     </ComponentGroup>

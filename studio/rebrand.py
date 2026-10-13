@@ -25,6 +25,7 @@ APP_SITE = 'https://muhandes.studio.creative.ps'
 KEEP = (
     'by the ArtCraft team', 'Application Support/CADCraft', '/roaming/CADCraft', 'CADCraft authors',
     'CADCraft contributors', 'CADCraft PDF', 'CADCraft PNG', 'CADCraft SVG', 'CADCraft Stroke',
+    'مبني على CADCraft من فريق ArtCraft',
     'CADCraft.Drawing', 'CADCRAFT_', 'на основі CADCraft командою ArtCraft',
 )
 
@@ -53,6 +54,30 @@ RULES = [
     ('packaging/linux/ai.storyteller.cadcraft.desktop', 'Name=CADCraft', f'Name={NAME}'),
     ('packaging/linux/ai.storyteller.cadcraft.metainfo.xml.in', '<name>CADCraft</name>', f'<name>{NAME}</name>'),
     ('packaging/windows/cadcraft.wxs', '<Feature Id="Main" Title="CADCraft" Level="1">', f'<Feature Id="Main" Title="{NAME}" Level="1">'),
+    # Installer identity: our own UpgradeCode (so muhandes never replaces a CADCraft install), our
+    # registry keys and ProgId. Component GUIDs are ours too (Windows Installer tracks them machine-wide).
+    ('packaging/windows/cadcraft.wxs', 'UpgradeCode="119D7D76-0167-4A9E-8F37-09DA0235F68E"',
+     'UpgradeCode="EF215B5F-639A-48A1-ACDC-24F0482B6704"', 'EF215B5F-639A-48A1-ACDC-24F0482B6704'),
+    ('packaging/windows/cadcraft.wxs', 'Software\\Learning Machines LLC\\CADCraft', 'Software\\Creative Studio\\muhandes', 'Creative Studio\\muhandes'),
+    ('packaging/windows/cadcraft.wxs', 'Name="CADCraft.Drawing"', 'Name="muhandes.Drawing"', 'muhandes.Drawing'),
+    ('packaging/windows/cadcraft.wxs', 'Software\\Classes\\CADCraft.Drawing\\shell', 'Software\\Classes\\muhandes.Drawing\\shell', 'muhandes.Drawing\\shell'),
+    ('packaging/windows/cadcraft.wxs', 'Guid="2AC18056-48DE-4079-AB79-4FDEF4FBB075"', 'Guid="E860A02D-5476-4521-9A17-882D798476AD"', 'E860A02D-5476-4521-9A17-882D798476AD'),
+    ('packaging/windows/cadcraft.wxs', 'Guid="76029CD7-EBDB-420F-AC34-FF0E82A99E32"', 'Guid="6EE98F27-6F26-41EB-8B1A-35E5CF16A122"', '6EE98F27-6F26-41EB-8B1A-35E5CF16A122'),
+    # Right to left (studio/RTL.md): the Arabic interface flips through egui's switch (vendor/egui).
+    ('Cargo.toml', '[workspace.dependencies]\n',
+     '[patch.crates-io]\n# Creative Studio: egui with a right-to-left switch for the Arabic interface (studio/RTL.md).\negui = { path = "vendor/egui" }\n\n[workspace.dependencies]\n',
+     '[patch.crates-io]'),
+    ('crates/ui-egui/src/lib.rs', "        i18n::with_language(self.language(), || self.draw(ui));\n",
+     "        let language = self.language();\n"
+     "        // Creative Studio: Arabic lays the interface out right to left (vendor/egui). The switch is\n"
+     "        // process-wide, so unit tests, which run in parallel, leave it off (tests/rtl.rs covers it).\n"
+     "        #[cfg(not(test))]\n"
+     "        egui::set_rtl(i18n::bidi::RTL_CODES.contains(&language));\n"
+     "        i18n::with_language(language, || self.draw(ui));\n", 'egui::set_rtl('),
+    ('crates/ui-egui/src/palettes.rs', '    egui::Panel::right("cc_palettes").exact_size(300.0)',
+     '    // Creative Studio: right to left, the palettes sit on the left.\n'
+     '    let panel = if egui::is_rtl() { egui::Panel::left("cc_palettes") } else { egui::Panel::right("cc_palettes") };\n'
+     '    panel.exact_size(300.0)', 'is_rtl() { egui::Panel::left("cc_palettes")'),
 ]
 # Text in string literals and catalogs, before the general rename.
 LITERALS = []
@@ -125,7 +150,7 @@ def rename_sources() -> list:
     if o != s:
         plist.write_text(o, encoding='utf-8')
         changed.append('packaging/macos/Info.plist.in')
-    # Windows installer: visible names only. UpgradeCode and registry keys stay upstream's.
+    # Windows installer: visible names only (UpgradeCode, registry keys and GUIDs come from RULES).
     wxs = ROOT / 'packaging/windows/cadcraft.wxs'
     s = wxs.read_text(encoding='utf-8')
     o = s.replace('Name="CADCraft"', f'Name="{NAME}"').replace('Name="CADCraft" Description', f'Name="{NAME}" Description')

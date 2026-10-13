@@ -10,6 +10,10 @@ license = "MIT OR Apache-2.0"
 rust-version = "1.90"
 repository = "https://github.com/storytold/cadcraft"
 
+[patch.crates-io]
+# Creative Studio: egui with a right-to-left switch for the Arabic interface (studio/RTL.md).
+egui = { path = "vendor/egui" }
+
 [workspace.dependencies]
 # internal
 cadcraft-geom = { path = "crates/geom" }
