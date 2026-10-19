@@ -50,9 +50,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>ai.storyteller.cadcraft.dxf</string>
+      <string>ps.creative.studio.muhandes.dxf</string>
       <key>UTTypeDescription</key>
-      <string>Drawing Exchange Format</string>
+      <string>muhandes Drawing</string>
       <key>UTTypeConformsTo</key>
       <array><string>public.data</string></array>
       <key>UTTypeTagSpecification</key>
@@ -65,9 +65,9 @@
     </dict>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>ai.storyteller.cadcraft.dwg</string>
+      <string>ps.creative.studio.muhandes.dwg</string>
       <key>UTTypeDescription</key>
-      <string>Drawing</string>
+      <string>muhandes Drawing</string>
       <key>UTTypeConformsTo</key>
       <array><string>public.data</string></array>
       <key>UTTypeTagSpecification</key>
@@ -83,25 +83,25 @@
   <array>
     <dict>
       <key>CFBundleTypeName</key>
-      <string>Drawing Exchange Format</string>
+      <string>muhandes Drawing</string>
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>LSHandlerRank</key>
       <string>Alternate</string>
       <key>LSItemContentTypes</key>
-      <array><string>ai.storyteller.cadcraft.dxf</string></array>
+      <array><string>ps.creative.studio.muhandes.dxf</string></array>
       <key>CFBundleTypeIconFile</key>
       <string>CADCraft</string>
     </dict>
     <dict>
       <key>CFBundleTypeName</key>
-      <string>Drawing</string>
+      <string>muhandes Drawing</string>
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>LSHandlerRank</key>
       <string>Alternate</string>
       <key>LSItemContentTypes</key>
-      <array><string>ai.storyteller.cadcraft.dwg</string></array>
+      <array><string>ps.creative.studio.muhandes.dwg</string></array>
       <key>CFBundleTypeIconFile</key>
       <string>CADCraft</string>
     </dict>

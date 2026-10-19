@@ -36,8 +36,6 @@ RULES = [
      f'                    ui.heading(crate::tl!("{NAME}"));'),
     ('crates/ui-egui/src/dialogs.rs', 'ui.hyperlink_to("getartcraft.com/apps/cadcraft", "https://getartcraft.com/apps/cadcraft");',
      f'ui.hyperlink_to("{NAME}.studio.creative.ps", "{APP_SITE}");'),
-    ('crates/ui-egui/src/dialogs.rs', 'ui.hyperlink_to(crate::tl!("Join us on Discord"), "https://discord.gg/artcraft");',
-     f'ui.hyperlink_to(crate::tl!("Source code: github.com/7mz410/CreativeStudio-{NAME}"), "{REPO}");'),
     ('crates/ui-egui/src/dialogs.rs', 'crate::tl!("One of the Crafting Apps by the ArtCraft team and community.")',
      'crate::tl!("Part of the Creative Studio suite. Built on CADCraft by the ArtCraft team.")'),
     # Visible titles that are exact "CADCraft" literals (the general rename leaves those alone,
@@ -49,7 +47,6 @@ RULES = [
     ('apps/cadcraft/src/main.rs', '.with_title("CADCraft")', f'.with_title("{NAME}")'),
     # Web page and packages.
     ('apps/cadcraft-web/index.html', '<title>CADCraft</title>', f'<title>{NAME}</title>'),
-    ('apps/cadcraft-web/index.html', 'Loading CADCraft&hellip;', f'Loading {NAME}&hellip;'),
     ('apps/cadcraft/build.rs', '.set("ProductName", "CADCraft")', f'.set("ProductName", "{NAME}")'),
     ('packaging/linux/ai.storyteller.cadcraft.desktop', 'Name=CADCraft', f'Name={NAME}'),
     ('packaging/linux/ai.storyteller.cadcraft.metainfo.xml.in', '<name>CADCraft</name>', f'<name>{NAME}</name>'),
@@ -147,6 +144,11 @@ def rename_sources() -> list:
     s = plist.read_text(encoding='utf-8')
     o = re.sub(r'(<key>CFBundle(?:Display)?Name</key>\s*<string>)CADCraft(</string>)', rf'\g<1>{NAME}\2', s)
     o = o.replace('<string>ai.storyteller.cadcraft</string>', '<string>ps.creative.studio.muhandes</string>')
+    # Our own document types: the CADCraft UTIs (ai.storyteller.cadcraft.dxf/dwg) are upstream's, so
+    # muhandes declares its own, and both document types read "muhandes Drawing".
+    for ext in ('dxf', 'dwg'):
+        o = o.replace(f'ai.storyteller.cadcraft.{ext}', f'ps.creative.studio.muhandes.{ext}')
+    o = re.sub(r'(<key>(?:CFBundleTypeName|UTTypeDescription)</key>\s*<string>)[^<]*(</string>)', rf'\g<1>{NAME} Drawing\2', o)
     if o != s:
         plist.write_text(o, encoding='utf-8')
         changed.append('packaging/macos/Info.plist.in')
