@@ -82,7 +82,7 @@ STRING = re.compile(r'"(?:[^"\\\n]|\\.)*"')
 # Literals that are only a settings-folder name (or a plot device) are kept as they are.
 EXACT_KEEP = ('"CADCraft"',)
 # The MCP server (crates/mcp) keeps upstream's wording, so its tests keep it too.
-SKIP_FILES = ('apps/cadcraft-cli/tests/mcp_connect.rs',)
+SKIP_FILES = ('apps/cadcraft-cli/tests/mcp_connect.rs', 'apps/cadcraft-cli/tests/it/mcp_connect.rs')
 
 
 def rename(lit: str) -> str:

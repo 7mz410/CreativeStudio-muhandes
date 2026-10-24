@@ -1254,3 +1254,116 @@
 	Justify	ضبط
 	Text color	لون النص
 	Click the ruler to add a tab stop, right-click to remove one	انقر فوق المسطرة لإضافة علامة جدولة، وانقر بزر الماوس الأيمن لإزالة واحدة
+	Add: Pick points	إضافة: انتقاء النقاط
+	Add: Select objects	إضافة: تحديد الكائنات
+	Add…	إضافة…
+	Alias	اسم مستعار
+	Alias file: {file}	ملف الأسماء المستعارة: {file}
+	Arrow size	حجم السهم
+	Associative	ترابطي
+	B	B
+	Block to create or edit	كتلة للإنشاء أو التحرير
+	Bottom left	أسفل اليسار
+	Bottom right	أسفل اليمين
+	Boundaries	الحدود
+	Boundaries picked: {n}	الحدود المنتقاة: {n}
+	Break-line Symbol	رمز خط القطع
+	Centered	توسيط
+	Choose the command the alias starts.	اختر الأمر الذي يبدأه الاسم المستعار.
+	Clear Recent Files	مسح الملفات الأخيرة
+	Click to set new origin	انقر لتعيين نقطة أصل جديدة
+	Close Block Editor	إغلاق محرر الكتل
+	Color 1	اللون 1
+	Color 2	اللون 2
+	Command	الأمر
+	Convert Text to Mtext	تحويل النص إلى Mtext
+	Create separate hatches	إنشاء تهشيرات منفصلة
+	Crossing selection color:	لون تحديد التقاطع:
+	Curved	منحنٍ
+	Custom	مخصص
+	Customize	تخصيص
+	Default to boundary extents	الافتراضي إلى امتدادات الحدود
+	Define each corner of the selection window with a separate click.	حدد كل زاوية من نافذة التحديد بنقرة منفصلة.
+	Dim scale overall	المقياس الإجمالي للأبعاد
+	Discard	تجاهل
+	Drag Dynamic Grip	سحب المقبض الديناميكي
+	Dynamic Block Data	بيانات الكتلة الديناميكية
+	Dynamic Block Grips	مقابض الكتلة الديناميكية
+	Dynamic Block Reference	مرجع الكتلة الديناميكية
+	Edit Block Definition	تحرير تعريف الكتلة
+	Edit Command Aliases (PGP)...	تحرير الأسماء المستعارة للأوامر (PGP)...
+	Edit…	تحرير…
+	Evaluate LISP	تقييم LISP
+	Exclude:	استبعاد:
+	Explode Attributes to Text	تفجير السمات إلى نص
+	Express Tools	Express Tools
+	Grips	المقابض
+	Groups	المجموعات
+	Hatch Pick	انتقاء التهشير
+	Hatch and Gradient	التهشير والتدرج
+	Hatch origin	نقطة أصل التهشير
+	Hatches	التهشيرات
+	Hemispherical	نصف كروي
+	Ignore	تجاهل
+	Indicate selection area	تحديد منطقة التحديد
+	Interface scale	مقياس الواجهة
+	Inverted	معكوس
+	Island	جزيرة
+	Island detection	اكتشاف الجزر
+	Load Application...	تحميل التطبيق...
+	More than {n} aliases.	أكثر من {n} اسم مستعار.
+	Move/Copy/Rotate	نقل/نسخ/تدوير
+	Multiline text	نص متعدد الأسطر
+	New block	كتلة جديدة
+	No alias file loaded. REINIT replaces these aliases with a file's.	لم يتم تحميل أي ملف أسماء مستعارة. يستبدل أمر REINIT هذه الأسماء المستعارة بملف.
+	Normal	عادي
+	Object grouping	تجميع الكائنات
+	Object selection limit for display of grips	حد تحديد الكائنات لعرض المقابض
+	Objects on locked layers	كائنات على طبقات مقفلة
+	Open Recent	فتح الملفات الأخيرة
+	Open in Block Editor	فتح في محرر الكتل
+	Origin: {x}, {y}	نقطة الأصل: {x}، {y}
+	Outer	خارجي
+	Precision	الدقة
+	Preview	معاينة
+	Save Block	حفظ الكتلة
+	Save Block As	حفظ الكتلة باسم
+	Save alias	حفظ الاسم المستعار
+	Select boundaries to remove	تحديد الحدود للإزالة
+	Select using two clicks only	التحديد باستخدام نقرتين فقط
+	Selection Area Effect	تأثير منطقة التحديد
+	Selection Preview Filter	مرشح معاينة التحديد
+	Selection area opacity:	شفافية منطقة التحديد:
+	Selection effect color	لون تأثير التحديد
+	Selection modes	أوضاع التحديد
+	Selection preview	معاينة التحديد
+	Set Dynamic Property	تعيين الخاصية الديناميكية
+	Shape	الشكل
+	Sheet Books to PDF...	كتب اللوحات إلى PDF...
+	Show grips	إظهار المقابض
+	Specified origin	نقطة الأصل المحددة
+	Spherical	كروي
+	Tables	الجداول
+	This drawing	هذا الرسم
+	Top left	أعلى اليسار
+	Top right	أعلى اليمين
+	Type an alias name.	اكتب اسماً مستعاراً.
+	Unsaved changes	تغييرات غير محفوظة
+	Use current origin	استخدام نقطة الأصل الحالية
+	Visual Effect Settings	إعدادات التأثيرات المرئية
+	Visual Effect Settings...	إعدادات التأثيرات المرئية...
+	When a command is active	عندما يكون الأمر نشطاً
+	When no command is active	عندما لا يكون أي أمر نشطاً
+	Window selection color:	لون تحديد النافذة:
+	X	X
+	Xrefs	Xrefs
+	Y	Y
+	built-in	مدمج
+	contains authoring elements. Open in Block Editor?	يحتوي على عناصر تأليف. هل تريد الفتح في محرر الكتل؟
+	overrides built-in	يتجاوز المدمج
+	{alias} is already defined; select it and use Edit.	{alias} معرف بالفعل؛ حدده واستخدم تحرير.
+	{command} is an unknown command.	{command} هو أمر غير معروف.
+menu	Dimension	قياس
+menu	Draw	رسم
+menu	Modify	تعديل
+menu	View	عرض
