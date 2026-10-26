@@ -523,9 +523,9 @@ fn default_fonts_cover_czech_letters_and_typographic_quotes() {
     let letters: BTreeSet<_> = "ÁČĎÉĚÍŇÓŘŠŤÚŮÝŽáčďéěíňóřšťúůýž„“".chars().collect();
     ctx.fonts_mut(|view| {
         for family in [egui::FontFamily::Proportional, egui::FontFamily::Monospace] {
-            let mut font = view.fonts.font(&family);
+            let font = view.characters(&family);
             for c in &letters {
-                assert!(font.characters().contains_key(c), "missing {c} in {family:?}");
+                assert!(font.contains_key(c), "missing {c} in {family:?}");
             }
         }
     });
@@ -573,9 +573,9 @@ fn italian_locales_plurals_and_accents() {
     assert!(letters.contains(&'à') && letters.contains(&'è'));
     ctx.fonts_mut(|view| {
         for family in [egui::FontFamily::Proportional, egui::FontFamily::Monospace] {
-            let mut font = view.fonts.font(&family);
+            let font = view.characters(&family);
             for c in &letters {
-                assert!(font.characters().contains_key(c), "missing {c} in {family:?}");
+                assert!(font.contains_key(c), "missing {c} in {family:?}");
             }
         }
     });
@@ -763,9 +763,9 @@ fn default_fonts_cover_swedish_letters_and_quotes() {
     let letters: BTreeSet<_> = "ÅÄÖÉåäöé”–".chars().collect();
     ctx.fonts_mut(|view| {
         for family in [egui::FontFamily::Proportional, egui::FontFamily::Monospace] {
-            let mut font = view.fonts.font(&family);
+            let font = view.characters(&family);
             for c in &letters {
-                assert!(font.characters().contains_key(c), "missing {c} in {family:?}");
+                assert!(font.contains_key(c), "missing {c} in {family:?}");
             }
         }
     });
@@ -868,9 +868,9 @@ fn default_fonts_cover_hungarian_letters_and_quotes() {
     let letters: BTreeSet<_> = "ÁÉÍÓÖŐÚÜŰáéíóöőúüű„”–…".chars().collect();
     ctx.fonts_mut(|view| {
         for family in [egui::FontFamily::Proportional, egui::FontFamily::Monospace] {
-            let mut font = view.fonts.font(&family);
+            let font = view.characters(&family);
             for c in &letters {
-                assert!(font.characters().contains_key(c), "missing {c} in {family:?}");
+                assert!(font.contains_key(c), "missing {c} in {family:?}");
             }
         }
     });
@@ -976,9 +976,9 @@ fn default_fonts_cover_every_turkish_letter_in_the_catalog() {
     letters.extend(translations.flat_map(str::chars).filter(|c| !c.is_ascii() && c.is_alphabetic()));
     ctx.fonts_mut(|view| {
         for family in [egui::FontFamily::Proportional, egui::FontFamily::Monospace] {
-            let mut font = view.fonts.font(&family);
+            let font = view.characters(&family);
             for c in &letters {
-                assert!(font.characters().contains_key(c), "missing {c} in {family:?}");
+                assert!(font.contains_key(c), "missing {c} in {family:?}");
             }
         }
     });
@@ -1019,9 +1019,9 @@ fn default_fonts_cover_all_greek_letters_in_the_catalog() {
         include_str!("el.tsv").chars().filter(|c| ('\u{0370}'..='\u{03ff}').contains(c) || ('\u{1f00}'..='\u{1fff}').contains(c)).collect();
     ctx.fonts_mut(|view| {
         for family in [egui::FontFamily::Proportional, egui::FontFamily::Monospace] {
-            let mut font = view.fonts.font(&family);
+            let font = view.characters(&family);
             for c in &letters {
-                assert!(font.characters().contains_key(c), "missing Greek glyph {c} in {family:?}");
+                assert!(font.contains_key(c), "missing Greek glyph {c} in {family:?}");
             }
         }
     });
