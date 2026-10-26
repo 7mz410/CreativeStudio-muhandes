@@ -263,7 +263,7 @@ fn main() -> eframe::Result {
     #[cfg(not(target_arch = "wasm32"))]
     if let Some(done) = craft_update::self_update::finish(&craft_update::suite::CADCRAFT, &std::env::args_os().skip(1).collect::<Vec<_>>()) {
         if let Err(e) = done {
-            eprintln!("CADCraft update helper failed: {e}");
+            eprintln!("muhandes update helper failed: {e}");
             std::process::exit(1);
         }
         return Ok(());
